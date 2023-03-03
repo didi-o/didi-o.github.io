@@ -1,0 +1,826 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><div id="myscoll"></div><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>7面向对象编程-中 | Fomalhaut🥝</title><meta name="keywords" content="Java,MySQL,算法,代码,博客,Butterfly,Hexo,Fomalhaut🥝,Fomalhaut"><meta name="author" content="Fomalhaut🥝"><meta name="copyright" content="Fomalhaut🥝"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="7 面向对象编程（中级） IDE：集成开发环境  IDEA  Eeclipse：一个开源的、基于 Java 的可扩展开发平台。是由 IBM 公司开发，在 2001 年 11 月贡献给开源社区的，目前最优秀的 Java 开发 IDE 之一。    7.1 IDEA 的使用 IDEA：全程 IntelliJ IDEA。在业界被公认为最好的 Java 开发工具。是捷克 JetBrains 公司的产品。除">
+<meta property="og:type" content="article">
+<meta property="og:title" content="7面向对象编程-中">
+<meta property="og:url" content="https://www.fomal.cc/posts/94f151e3.html">
+<meta property="og:site_name" content="Fomalhaut🥝">
+<meta property="og:description" content="7 面向对象编程（中级） IDE：集成开发环境  IDEA  Eeclipse：一个开源的、基于 Java 的可扩展开发平台。是由 IBM 公司开发，在 2001 年 11 月贡献给开源社区的，目前最优秀的 Java 开发 IDE 之一。    7.1 IDEA 的使用 IDEA：全程 IntelliJ IDEA。在业界被公认为最好的 Java 开发工具。是捷克 JetBrains 公司的产品。除">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://source.fomal.cc/img/default_cover_14.webp">
+<meta property="article:published_time" content="2023-03-03T15:03:06.000Z">
+<meta property="article:modified_time" content="2023-03-03T15:05:16.418Z">
+<meta property="article:author" content="Fomalhaut🥝">
+<meta property="article:tag" content="Java,MySQL,算法,代码,博客,Butterfly,Hexo,Fomalhaut🥝,Fomalhaut">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://source.fomal.cc/img/default_cover_14.webp"><link rel="shortcut icon" href="/"><link rel="canonical" href="https://www.fomal.cc/posts/94f151e3"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '7面向对象编程-中',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-03 23:05:16'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"><style id="themeColor"></style><style id="rightSide"></style><style id="transPercent"></style><style id="blurNum"></style><style id="settingStyle"></style><span id="fps"></span><style id="defineBg"></style><style id="menu_shadow"></style><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Fomalhaut🥝" type="application/atom+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tuchuang.voooe.cn/images/2023/01/02/avatar.webp" onerror="onerror=null;src='/assets/r1.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pinweishenghuo"></use></svg><span class="menu_word" style="font-size:17px"> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/life/music/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-yinle">                   </use></svg><span class="menu_word" style="font-size:17px"> 八音盒</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying1">                   </use></svg><span class="menu_word" style="font-size:17px"> 影院</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/games/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxishoubing">                   </use></svg><span class="menu_word" style="font-size:17px"> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:17px"> 八宝箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-tubiaozhizuomoban">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/animation/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-nvwumao">                   </use></svg><span class="menu_word" style="font-size:17px"> 动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-zhifengche">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiaoxinxi"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/social/fcircle/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pengyouquan">                   </use></svg><span class="menu_word" style="font-size:17px"> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyan">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-lianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangye"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--tongjibiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/echarts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shujutongji1">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 旧时光</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-maoliang"></use></svg><span class="menu_word" style="font-size:17px"> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-qunliaotian">                   </use></svg><span class="menu_word" style="font-size:17px"> 唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/love/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-love-sign">                   </use></svg><span class="menu_word" style="font-size:17px"> 恋爱小屋</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-paperplane">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Fomalhaut🥝</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pinweishenghuo"></use></svg><span class="menu_word" style="font-size:17px"> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/life/music/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-yinle">                   </use></svg><span class="menu_word" style="font-size:17px"> 八音盒</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying1">                   </use></svg><span class="menu_word" style="font-size:17px"> 影院</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/games/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxishoubing">                   </use></svg><span class="menu_word" style="font-size:17px"> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:17px"> 八宝箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-tubiaozhizuomoban">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/animation/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-nvwumao">                   </use></svg><span class="menu_word" style="font-size:17px"> 动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-zhifengche">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiaoxinxi"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/social/fcircle/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pengyouquan">                   </use></svg><span class="menu_word" style="font-size:17px"> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyan">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-lianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangye"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--tongjibiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/echarts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shujutongji1">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 旧时光</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-maoliang"></use></svg><span class="menu_word" style="font-size:17px"> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-qunliaotian">                   </use></svg><span class="menu_word" style="font-size:17px"> 唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/love/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-love-sign">                   </use></svg><span class="menu_word" style="font-size:17px"> 恋爱小屋</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-paperplane">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于</span></a></li></ul></div></div><center id="name-container"><a id="page-name" href="javascript:scrollToTop()">PAGE_NAME</a></center><div id="nav-right"><div id="search-button"><a class="search faa-parent animated-hover" title="检索站内任何你想要的信息"><svg class="faa-tada icon" style="height:24px;width:24px;fill:currentColor;position:relative;top:6px" aria-hidden="true"><use xlink:href="#icon-valentine_-search-love-find-heart"></use></svg><span> 搜索</span></a></div><a class="meihua faa-parent animated-hover" onclick="toggleWinbox()" title="美化设置-自定义你的风格" id="meihua-button"><svg class="faa-tada icon" style="height:26px;width:26px;fill:currentColor;position:relative;top:8px" aria-hidden="true"><use xlink:href="#icon-tupian1"></use></svg></a><a class="sun_moon faa-parent animated-hover" onclick="switchNightMode()" title="浅色和深色模式转换" id="nightmode-button"><svg class="faa-tada" style="height:25px;width:25px;fill:currentColor;position:relative;top:7px" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon">       </use></svg></a><div id="toggle-menu"><a><i class="fas fa-bars fa-fw"></i></a></div></div></div></nav><div id="post-info"><h1 class="post-title">7面向对象编程-中</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><svg class="meta_icon post-meta-icon" style="width:30px;height:30px;position:relative;top:10px"><use xlink:href="#icon-rili"></use></svg><span class="post-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2023-03-03T15:03:06.000Z" title="发表于 2023-03-03 23:03:06">2023-03-03</time><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:18px;height:18px;position:relative;top:5px"><use xlink:href="#icon-gengxin1"></use></svg><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-03T15:05:16.418Z" title="更新于 2023-03-03 23:05:16">2023-03-03</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:8px"><use xlink:href="#icon-charuword"></use></svg><span class="post-meta-label">字数总计:</span><span class="word-count">5805</span><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:20px;height:20px;position:relative;top:5px"><use xlink:href="#icon-shizhong"></use></svg><span class="post-meta-label">阅读时长:</span><span>20分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="7面向对象编程-中"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:5px"><use xlink:href="#icon-eye"></use></svg><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="7-面向对象编程（中级）"><a href="#7-面向对象编程（中级）" class="headerlink" title="7 面向对象编程（中级）"></a>7 面向对象编程（中级）</h1><blockquote>
+<p>IDE：集成开发环境</p>
+<ul>
+<li><p>IDEA</p>
+</li>
+<li><p>Eeclipse：一个开源的、基于 Java 的可扩展开发平台。是由 IBM 公司开发，在 2001 年 11 月贡献给开源社区的，目前最优秀的 Java 开发 IDE 之一。</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="7-1-IDEA-的使用"><a href="#7-1-IDEA-的使用" class="headerlink" title="7.1 IDEA 的使用"></a>7.1 IDEA 的使用</h2><blockquote>
+<p>IDEA：全程 IntelliJ IDEA。在业界被公认为最好的 Java 开发工具。是捷克 JetBrains 公司的产品。除了 Java 开发，还支持 HTML，CSS，PHP，MySQL，Python 等。<a target="_blank" rel="noopener" href="https://www.jetbrains.com/zh-cn/idea/download/#section=windows" title="下载左边的旗舰版。试用30天，之后是 你 懂 的">下载地址</a></p>
+</blockquote>
+<h3 id="7-1-1-常用快捷键"><a href="#7-1-1-常用快捷键" class="headerlink" title="7.1.1 常用快捷键"></a>7.1.1 常用快捷键</h3><ul>
+<li>删除当前行：<code>ctrl + Y</code></li>
+<li>复制当前行：<code>ctrl + D</code></li>
+<li>补全代码：<code>alt + /</code></li>
+<li>添加 / 取消注释：<code>ctrl + /</code></li>
+<li>导入该行需要的类：<code>alt + enter</code></li>
+<li>快速格式化代码：<code>ctrl + alt + L</code></li>
+<li>快速运行程序：<code>shift + F10</code>（我改成了<code>alt + R</code>）</li>
+<li>生成构造器：<code>alt + insert</code></li>
+<li>查看一个类的层级关系：<code>ctrl + H</code></li>
+<li>定位一个方法：把光标放在一个方法上，按 <code>ctrl + B</code></li>
+<li>自动分配变量名：在后面加上 <code>.var</code></li>
+<li>查看模板快捷键：<code>ctrl + J</code></li>
+<li>快速环绕代码：<code>ctrl + alt + T</code></li>
+</ul>
+<h3 id="7-1-2-模板快捷键"><a href="#7-1-2-模板快捷键" class="headerlink" title="7.1.2 模板快捷键"></a>7.1.2 模板快捷键</h3><ul>
+<li><code>main</code>：<code>public static void main(String[] args) &#123;&#125;</code></li>
+<li><code>sout</code>：<code>System.out.println();</code></li>
+<li><code>fori</code>：<code>for (int i = 0; i &lt; ; i++) &#123;&#125;</code></li>
+<li><code>xxx.for</code>：<code>for(int i = 0; i &lt; xxx; i++) &#123;&#125;</code></li>
+</ul>
+<p>更多的请在 File - Settings - Editor - Live template 中查看或添加</p>
+<p>或者，通过下列快捷键查看</p>
+<ul>
+<li><code>ctrl + J</code>：查看模板快捷键</li>
+</ul>
+<h2 id="7-2-包"><a href="#7-2-包" class="headerlink" title="7.2 包"></a>7.2 包</h2><blockquote>
+<p>包的作用：1. 区分相同名字的类 2. 当类很多时，便于管理 3. 控制访问范围</p>
+<p>语法：<code>package com.name</code> 其中 <code>com</code> <code>name</code> 分别是 一级 和 二级目录，用 <code>.</code> 分隔</p>
+<p>包的本质：就是创建不同 文件夹/目录 来保存 类 文件</p>
+</blockquote>
+<p>如何使用包中的对象：</p>
+<ol>
+<li><p>先引入包，之后创建对象</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import com.name.T<span class="comment">;</span></span><br><span class="line">...</span><br><span class="line">T tools <span class="operator">=</span> new T()<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>不引入包，而在创建对象时写全路径</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.name.T tools = <span class="built_in">new</span> com.name.T();</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>命名规则：</strong></p>
+<ul>
+<li>只能包含 数字 <code>1 2 3</code>、字母 <code>a b A b</code>、下划线 <code>_</code>、小圆点 <code>.</code></li>
+<li>不能用 数字 开头。每级目录都不能。</li>
+</ul>
+<p><strong>命名规范：</strong></p>
+<ul>
+<li>全小写字母 + 小圆点</li>
+<li><code>com.公司名.项目名.业务模块名</code></li>
+</ul>
+<p><strong>常用的包：</strong></p>
+<p><code>java.lang</code>：基本包，默认引入，不需要再引入</p>
+<p><code>java.util</code>：系统提供的工具包。工具类。</p>
+<p><code>java.net</code>：网络包，网络开发。</p>
+<p><code>java.awt</code>：Java 的界面开发，GUI。</p>
+<p><strong>引入包：</strong></p>
+<ul>
+<li>只引入该包下的一个类：<code>import java.util.Scanner</code></li>
+<li>引入该包的所有内容（不建议）：<code>import java.util.*</code></li>
+</ul>
+<p><strong>使用细节：</strong></p>
+<ol>
+<li><p><code>package</code> 的作用是声明当前类所在的包，要放在 类 的 最上面。一个 类 中最多有一句 <code>package</code></p>
+</li>
+<li><p><code>import</code> 放在 <code>package</code> 下面，类定义 前面。可以有多条语句，且没有顺序要求</p>
+</li>
+<li><p>编译器编译时 <strong>不会</strong> 检查目录结构。</p>
+<p>即使一个包处于错误的目录下（只要其不依赖其他包）也可能通过编译。</p>
+<p>但是，虚拟机会找不到该包，最终程序无法运行。</p>
+</li>
+<li><p>从 1.2 版本开始，用户不能再把包放在 java. 开头的目录下了。若如此做，这些包会被禁止加载。</p>
+</li>
+</ol>
+<h3 id="7-4-1-静态导入"><a href="#7-4-1-静态导入" class="headerlink" title="7.4.1 静态导入"></a>7.4.1 静态导入</h3><blockquote>
+<p>有一种 import 语句允许导入静态方法和字段，而不只是类</p>
+</blockquote>
+<p>比如：</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.<span class="built_in">Math</span>.*;</span><br></pre></td></tr></table></figure>
+<p>这个场合，使用 Math 包内的静态方法、字段时，不需要再添加类名前缀。</p>
+<figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">double n = <span class="built_in">pow</span>(<span class="number">10</span>, <span class="number">5</span>);					// &lt;———— 本来是 double n = Math.<span class="built_in">pow</span>(<span class="number">10</span>, <span class="number">5</span>);</span><br><span class="line">double <span class="built_in">pi</span> = <span class="built_in">PI</span>;							// &lt;———— 本来是 double <span class="built_in">pi</span> = Math.<span class="built_in">PI</span>;</span><br></pre></td></tr></table></figure>
+<p><strong><em>—— 上述方法、字段见 <a href="../../../../../../2021/12/19/Java/入门阶段/12%20%E5%B8%B8%E7%94%A8%E7%B1%BB/#12-5-Math-%E7%B1%BB">[12.5 Math 类]</a></em></strong></p>
+<h2 id="7-3-访问修饰符"><a href="#7-3-访问修饰符" class="headerlink" title="7.3 访问修饰符"></a>7.3 访问修饰符</h2><h3 id="7-3-1-访问权限特点"><a href="#7-3-1-访问权限特点" class="headerlink" title="7.3.1 访问权限特点"></a>7.3.1 访问权限特点</h3><p>Java 提供 4 种 访问控制修饰符号，用于控制方法和属性（成员变量）的访问权限（范围）</p>
+<ul>
+<li><p>公开级别：<code>public</code>，对外公开。</p>
+</li>
+<li><p>受保护级别：<code>protected</code>，对 子类 和 同一个包中的类 公开。</p>
+<p><strong><em>——什么是 子类？详见 <a href="../../../../../../2021/12/05/Java/入门阶段/7%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%AD%E7%BA%A7%EF%BC%89/#7-5-%E7%BB%A7%E6%89%BF%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89">[ 7.5 继承 ]</a></em></strong></p>
+</li>
+<li><p>默认级别：没有修饰符号，向 同一个包的类 公开。</p>
+</li>
+<li><p>私有级别：<code>private</code>，只有 同类 可以访问，不对外公开。</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>(⌐■_■)</th>
+<th>默认（无修饰符）</th>
+<th>private</th>
+<th>protected</th>
+<th>public</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本类</td>
+<td>可</td>
+<td>可</td>
+<td>可</td>
+<td>可</td>
+</tr>
+<tr>
+<td>同包中的子类</td>
+<td>可</td>
+<td>不可以</td>
+<td>可</td>
+<td>可</td>
+</tr>
+<tr>
+<td>同包的非子类</td>
+<td>可</td>
+<td>不可以</td>
+<td>可</td>
+<td>可</td>
+</tr>
+<tr>
+<td>其他包的子类</td>
+<td>不可以</td>
+<td>不可以</td>
+<td>可</td>
+<td>可</td>
+</tr>
+<tr>
+<td>其他包的非子类</td>
+<td>不可以</td>
+<td>不可以</td>
+<td>不可以</td>
+<td>可</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="7-3-2-使用说明"><a href="#7-3-2-使用说明" class="headerlink" title="7.3.2 使用说明"></a>7.3.2 使用说明</h3><ol>
+<li>修饰符可以修饰类中的 属性、成员方法 及 类</li>
+<li>只有 默认 和 <code>public</code> 才能修饰 类，并遵循上述访问权限特点</li>
+<li>成员方法 的访问规则和 属性 相同</li>
+<li>private 修饰的变量可以被 任意本对象同类的对象访问</li>
+</ol>
+<h2 id="7-4-封装"><a href="#7-4-封装" class="headerlink" title="7.4 封装"></a>7.4 封装</h2><blockquote>
+<p>封装（encapsulation）就是把抽象出的 数据[属性] 和对数据的 操作[方法] 封装在一起。数据 被保护在内部，程序的其他部分只有通过被授权的 操作[方法]，才能对数据进行操作。</p>
+</blockquote>
+<p>封装的好处：</p>
+<ul>
+<li>隐藏实现细节</li>
+<li>可以对数据进行验证，保证安全合理</li>
+</ul>
+<p><strong>实现步骤：</strong></p>
+<ol>
+<li>将属性私有化 <code>private</code></li>
+<li>提供一个公共的 <code>set</code> 方法，用于对属性判断并赋值</li>
+<li>提供一个公共的 <code>get</code> 方法，用于获取属性的值</li>
+</ol>
+<p><strong>编译多个源文件：</strong></p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">javac </span>MyClass.<span class="keyword">java</span></span><br></pre></td></tr></table></figure>
+<p>该文件中使用了其他类时，Java 编译器会查找对应名称的 .class 文件。没有找到的场合，转而寻找 .java 文件，并对其编译。倘若 .java 文件相较原有 .class 文件更新，编译器也会自动重新编译该文件。</p>
+<h3 id="7-4-1-静态导入-1"><a href="#7-4-1-静态导入-1" class="headerlink" title="7.4.1 静态导入"></a>7.4.1 静态导入</h3><blockquote>
+<p>有一种 import 语句允许导入静态方法和字段，而不只是类</p>
+</blockquote>
+<p>比如：</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.<span class="built_in">Math</span>.*;</span><br></pre></td></tr></table></figure>
+<p>这个场合，使用 Math 包内的静态方法、字段时，不需要再添加类名前缀。</p>
+<figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">double n = <span class="built_in">pow</span>(<span class="number">10</span>, <span class="number">5</span>);					// &lt;———— 本来是 double n = Math.<span class="built_in">pow</span>(<span class="number">10</span>, <span class="number">5</span>);</span><br><span class="line">double <span class="built_in">pi</span> = <span class="built_in">PI</span>;							// &lt;———— 本来是 double <span class="built_in">pi</span> = Math.<span class="built_in">PI</span>;</span><br></pre></td></tr></table></figure>
+<p><strong><em>—— 上述方法、字段见 [12.5 Math 类]</em></strong></p>
+<h3 id="7-4-2-JAR-文件"><a href="#7-4-2-JAR-文件" class="headerlink" title="7.4.2 JAR 文件"></a>7.4.2 JAR 文件</h3><blockquote>
+<p>为了避免向用户提供包含大量类文件的复杂目录结构，可以将 Java 程序打包成 JAR （Java 归档）文件。</p>
+<p>一个 JAR 文件既可以包含类文件，也可以包含诸如图像和声音等其他类型的文件。</p>
+<p>JAR 文件是压缩的。其使用了 ZIP压缩格式。</p>
+</blockquote>
+<p><strong>创建 JAR：</strong></p>
+<p>使用 jar 工具以制作 JAR 文件。该工具在 jdk/bin 目录下</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">jar</span> cvf 包名 文件名<span class="number">1</span> 文件名<span class="number">2</span> ...</span><br></pre></td></tr></table></figure>
+<p>关于 jar 工具的各种指令，还是自己去百度一下吧</p>
+<h2 id="7-5-继承"><a href="#7-5-继承" class="headerlink" title="7.5 继承"></a>7.5 继承</h2><blockquote>
+<p>继承：能解决代码复用，让我们的编程更接近人类思维。当多个类存在相同的 属性（变量）和 方法 时，可以从这些类中抽象出 父类（基类/超类）。在 父类 中定义这些属性·方法，所有的子类不需要重新定义这些属性和方法，只需要通过 <code>extends</code> 来声明继承父类即可。</p>
+<p>通过继承的方法，代码的复用性提高了，代码的维护性和拓展性也提高了。</p>
+</blockquote>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Son</span> <span class="keyword">extends</span> <span class="title">Father</span> </span>&#123;&#125;;				<span class="comment">// Son 类继承了 Father 类</span></span><br></pre></td></tr></table></figure>
+<p>定义类时可以指明其父类，也能不指明。不指明的场合，默认继承 Object 类。</p>
+<p>所有类有且只有一个父类。Object 是所有类的直接或间接父类。只有 Object 本身没有父类。</p>
+<h3 id="7-5-1-使用细节"><a href="#7-5-1-使用细节" class="headerlink" title="7.5.1 使用细节"></a>7.5.1 使用细节</h3><ol>
+<li><p>子类 继承了所有属性和方法，但私有（<code>private</code>）的 属性·方法 不能在 子类 直接访问。要调用父类提供的 公共（<code>public</code>）等方法 访问。</p>
+</li>
+<li><p>子类 必须调用 父类 的 构造器，完成 父类 的 初始化。</p>
+</li>
+<li><p>当创建 子类对象 时，不管使用 子类的哪个构造器，默认情况下总会调用 父类的无参构造器。如果 父类 没有提供 无参构造器，则必须在 子类的构造器 中用 <code>super</code> 去指定使用 父类的哪个构造器 完成 对父类的初始化。否则编译不能通过。</p>
+</li>
+<li><p>如果希望指定调用 父类的某构造器，则显式地调用一下：<code>super(形参列表);</code></p>
+</li>
+<li><p><code>super</code> 在使用时，必须放在构造器第一行。<code>super</code> 只能在构造器中使用。</p>
+</li>
+<li><p>由于 <code>super</code> 与 <code>this</code> 都要求放在第一行，所以此两个方法不能同时存在于同一构造器。</p>
+</li>
+<li><p>Java 所有的类都是 <code>Object</code> 的子类。换言之，<code>Object</code> 是所有类的父类。</p>
+</li>
+<li><p>父类构造器的调用不限于直接父类，将持续向上直至追溯到顶级父类 <code>Object</code></p>
+</li>
+<li><p>子类 最多只能直接继承 一个 父类。即，Java 中是 单继承机制。</p>
+</li>
+<li><p>不能滥用继承。子类 和 父类 之间必须满足 is - a 的逻辑关系。</p>
+</li>
+</ol>
+<h3 id="7-5-2-继承的本质"><a href="#7-5-2-继承的本质" class="headerlink" title="7.5.2 继承的本质"></a>7.5.2 继承的本质</h3><ul>
+<li>内存布局：<ol>
+<li>在 方法区，自顶级父类起，依次加载 类信息。</li>
+<li>在 堆 中开辟一个空间，自顶级父类起，依次创建并初始化各个类包含的所有属性信息。</li>
+<li>在 栈 中存放该空间的 地址。</li>
+</ol>
+</li>
+<li>如何查找信息？<ol>
+<li>查看该子类是否有该属性。如果该子类有这个属性且可以访问，则返回信息。</li>
+<li>子类没有该属性的场合，查看父类是否有该属性。如有且可访问，则返回信息。如不可访问，则报错。</li>
+<li>父类也没有该属性的场合，继续查找上级父类，直到顶级父类（Object）。</li>
+<li>如需调用某个特定类包含的特定信息，可以调用该类提供的方法。</li>
+</ol>
+</li>
+</ul>
+<h3 id="7-5-3-super-关键字"><a href="#7-5-3-super-关键字" class="headerlink" title="7.5.3 super 关键字"></a>7.5.3 <code>super</code> 关键字</h3><blockquote>
+<p><code>super</code> 代表父类的引用。用于访问父类的 属性、方法、构造器。</p>
+</blockquote>
+<p><strong>super 的使用：</strong></p>
+<ul>
+<li><code>super.属性名</code>：访问父类的属性。不能访问父类的私有（private）属性。</li>
+<li><code>super.方法名(形参列表)</code>：访问父类的方法。不能访问父类的私有（private）方法。</li>
+<li><code>super(参数列表);</code>：访问父类的构造器。此时，super 语句必须放在第一句。</li>
+</ul>
+<p><strong>使用细节：</strong></p>
+<ol>
+<li>调用父类构造器，好处是分工明确。父类属性由父类初始化，子类由子类初始化。</li>
+<li>子类中由和父类中成员（属性和方法）重名时，要调用父类成员必须用 <code>super</code>。没有重名的场合，<code>super</code>、<code>this</code> 及直接调用的效果相同。</li>
+<li><code>super</code> 的访问不限于直接父类。如果爷爷类和本类中都有同名成员也能使用。如果多个基类中都有同名成员，则遵循就近原则。</li>
+</ol>
+<h3 id="7-5-4-方法重写-覆盖"><a href="#7-5-4-方法重写-覆盖" class="headerlink" title="7.5.4 方法重写 / 覆盖"></a>7.5.4 方法重写 / 覆盖</h3><blockquote>
+<p>方法重写/覆盖（Override）：如若子类有一个方法，和父类的某方法的 名称、返回类型、参数 一样，那么我们就说该子类方法 覆盖 了那个父类方法。</p>
+</blockquote>
+<p><strong>使用细节：</strong></p>
+<ol>
+<li>子类方法的参数，方法名称，要和父类方法完全一致。</li>
+<li>子类方法的返回类型需和父类方法 一致，或者是父类返回类型的子类。</li>
+<li>子类方法 <strong>不能缩小</strong> 父类方法的访问范围（访问修饰符）。</li>
+</ol>
+<h2 id="7-6-多态"><a href="#7-6-多态" class="headerlink" title="7.6 多态"></a>7.6 多态</h2><blockquote>
+<p>多态：方法 或 对象 有多种形态。多态 是面向对象的第三大特征，是建立在 封装 和 继承 的基础之上的</p>
+</blockquote>
+<h3 id="7-6-1-多态的体现"><a href="#7-6-1-多态的体现" class="headerlink" title="7.6.1 多态的体现"></a>7.6.1 多态的体现</h3><ol>
+<li><p>方法的多态：重写 和 重载 体现了 方法的多态。</p>
+</li>
+<li><p><strong>对象的多态：</strong></p>
+<ul>
+<li><p>一个对象的 编译类型 和 运行类型 可以不一致。</p>
+<p><code>Animal animal = new Dog();</code></p>
+<p>上例，编译类型是 <code>Animal</code>，运行类型是子类 <code>Dog</code>。要理解这句话，请回想 <a href="../../../../../../2021/11/29/Java/%E5%85%A5%E9%97%A8%E9%98%B6%E6%AE%B5/6%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89/#6-1-4-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%86%85%E5%AD%98%E8%AE%BF%E9%97%AE%E6%9C%BA%E5%88%B6">[6.1.4 类与对象的内存访问机制]</a>：<code>animal</code> 是对象的<strong>引用</strong>。</p>
+</li>
+<li><p>编译类型在定义对象时就确定了，不能改变。</p>
+</li>
+<li><p>运行类型是可以变化的。</p>
+<p>上例中，再让 <code>animal = new Cat();</code>，这样，运行类型变为了 <code>Cat</code></p>
+</li>
+<li><p>编译类型看定义时 <code>=</code> 的左边，运行类型看 <code>=</code> 的右边。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="7-6-2-使用细节"><a href="#7-6-2-使用细节" class="headerlink" title="7.6.2 使用细节"></a>7.6.2 使用细节</h3><ol>
+<li><p>多态的前提：两个对象 / 类存在继承关系。</p>
+</li>
+<li><p>多态的向上转型：</p>
+<ul>
+<li>本质：父类的引用指向了子类的对象。（如 [ 7.6.1.2 ]）</li>
+<li>语法：<code>父类类型 引用名 = new 子类类型(参数列表);</code></li>
+<li>编译类型看左边，运行类型看右边。</li>
+<li>可以调用父类中的所有成员，但不能调用子类特有的成员，而且需要遵守访问权限。因为在编译阶段，能调用哪些成员是由编译类型决定的。</li>
+<li>最终的运行结果要看子类的具体实现。即从子类起向上查找方法调用（与 [ 7.5.2 ] 规则相同）。</li>
+</ul>
+</li>
+<li><p>多态的向下转型：</p>
+<ul>
+<li><p>语法：<code>子类类型 引用名 = (子类类型)父类引用;</code></p>
+<p>[7.6.2.2] 的例子里，向下转型。这个语法其实和 [2.8.2 强制类型转换] 很像。</p>
+<p><code>Dog dog = (Dog)animal;</code></p>
+</li>
+<li><p>只能强转父类的引用，不能强转父类的对象。</p>
+</li>
+<li><p>要求父类的引用必须指向的是当前目标类型的对象。即上例中的 <code>animal</code> 运行类型需是 <code>Dog</code></p>
+</li>
+<li><p>向下转型后，可以调用子类类型中的所有成员。</p>
+</li>
+</ul>
+</li>
+<li><p>属性没有重写一说。<strong>和 方法 不同，属性的值 看编译类型。</strong></p>
+</li>
+<li><p><code>instanceof</code> 比较操作符。用于判断对象类型是否是某类型或其子类型。此时判断的是 <strong>运行类型</strong>。</p>
+</li>
+</ol>
+<h3 id="7-6-3-理解方法调用"><a href="#7-6-3-理解方法调用" class="headerlink" title="7.6.3 理解方法调用"></a>7.6.3 理解方法调用</h3><p>在对象上调用方法的过程如下：</p>
+<ol>
+<li><p>编译器查看对象的声明类型和方法名。该类和其父类中，所有同名方法（包括参数不同的方法）都被列举。</p>
+<p>至此，编译器已经知道所有可能被调用的方法。</p>
+</li>
+<li><p>编译器确认方法调用中提供的参数类型。</p>
+<p>那些列举方法中存在参数类型完全匹配的方法时，即调用该方法。</p>
+<p>没有发现匹配方法，抑或是发现经过类型转换产生了多个匹配方法时，就会报错</p>
+<p>至此，编译器已经知道要调用方法的名字和参数类型</p>
+</li>
+<li><p>如若是 private 方法、static 方法、final 方法、构造器，那么编译器将能准确知道要调用哪个方法。这称为 <strong>静态绑定</strong></p>
+<p>与之相对的，如果调用方法依赖于隐式参数类型，那么必须在运行时 <strong>动态绑定</strong></p>
+</li>
+<li><p>程序运行并采取动态绑定方法时，JVM 将调用那个 <strong>实际类型</strong> 对应的方法。</p>
+</li>
+</ol>
+<p>倘若每次调用方法都进行以上搜索，会造成庞大的时间开销。为此，JVM 预先为每个类计算了 <strong>方法表</strong>。</p>
+<p>方法表中列举了所有方法的签名与实际调用的方法。如此，每次调用方法时，只需查找该表即可。</p>
+<p>特别地，使用 super 关键字时，JVM 会查找其父类的方法表。</p>
+<p><strong>动态绑定机制：</strong></p>
+<ul>
+<li>当调用对象方法的时候，该方法和该对象（隐式参数）的内存地址/运行类型绑定。</li>
+<li>当调用对象属性时，没有动态绑定机制。于是哪里声明，哪里调用。</li>
+</ul>
+<h2 id="7-7-Object-类"><a href="#7-7-Object-类" class="headerlink" title="7.7 Object 类"></a>7.7 Object 类</h2><p>Object 类是所有类的超类。Java 中所有类默认继承该类。</p>
+<h3 id="equals-方法"><a href="#equals-方法" class="headerlink" title="equals 方法"></a>equals 方法</h3><p><code>boolean equals(Object obj)</code></p>
+<p>用于检测一个对象是否等于另一对象。</p>
+<p>在 Object 中，该方法的实现是比较 形参 与 隐式参数 的对象引用是否一致。</p>
+<p><strong>与 <code>==</code> 的区别：</strong></p>
+<ul>
+<li><p><code>==</code>：既可以判断基本类型，也可以判断引用类型。如果判断基本类型，判断的是值是否相等。如果判断引用类型，判断的是地址是否相等。</p>
+</li>
+<li><p>equals 方法：是 Object 中的方法，只能判断引用类型。默认判断地址是否相等，但子类中往往重写该代码，以判断内容是否相等。</p>
+<p>在子类中定义 equals 方法时，首先调用超类的 equals 方法。那个一致时，再比较子类中的字段。</p>
+</li>
+</ul>
+<p><strong>Java 语言规范要求 equals 方法具有如下特性：</strong></p>
+<ul>
+<li><p><em>自反性</em>：对于任何非空引用 x，<code>x.equals(x)</code> 应返回 true</p>
+</li>
+<li><p><em>对称性</em>：对于任何引用 x 和 y，当且仅当 <code>x.equals(y)</code> 为 true 时，<code>y.equals(x)</code> 为 true</p>
+<p>如果所有的子类具有相同的相等性语义，可以使用 <code>instanceof</code> 检测其类型。否则，最好使用 <code>getClass</code> 方法比较类型。</p>
+</li>
+<li><p><em>传递性</em>：对于任何引用 x、y、z，如果 <code>x.equals(y)</code> 为 true ，<code>y.equals(z)</code> 为 true，那么 <code>x.equals(z)</code> 也应该为 true</p>
+</li>
+<li><p><em>一致性</em>：如果 x 和 y 的引用没有发生变化，反复调用 <code>x.equals(y)</code> 应该返回相同的结果</p>
+</li>
+<li><p>对于任何非空引用 x，<code>x.equals(null)</code> 应该返回 false</p>
+</li>
+</ul>
+<h3 id="hashCode-方法"><a href="#hashCode-方法" class="headerlink" title="hashCode 方法"></a>hashCode 方法</h3><p><code>int hashCode()</code></p>
+<p>返回对象的 散列码值。</p>
+<p>散列码值是由对象导出的一个整型值。散列码是无规律的。如果 x 与 y 是不同对象，两者的散列码基本上不会相同。</p>
+<p>字符串的散列码是由其内容导出的，而其他引用对象的散列码是根据存储地址得出的。</p>
+<p><strong>散列码的作用：</strong></p>
+<ol>
+<li>提高哈希结构的容器的效率。</li>
+<li>两个引用，若是指向同一对象，则哈希值一般不同。</li>
+<li>哈希值是根据地址生成的，因而，哈希值不能等同于地址</li>
+</ol>
+<p><strong>相关方法：</strong></p>
+<ul>
+<li><p><code>Objects.hashCode(Object obj)</code></p>
+<p>这是一个 null 安全的返回散列值的方法。传入 null 时会返回 0</p>
+</li>
+<li><p><code>Objects.hash(Object... values)</code></p>
+<p>组合所有传入参数的散列值</p>
+</li>
+<li><p><code>Integer.hashCode(int value)</code></p>
+<p>返回给定基本数据类型的散列值。所有包装类都有该静态方法</p>
+</li>
+<li><p><code>Arrays.hashCode(xxx[] a)</code></p>
+<p>计算数组的散列码。数组类型可以是 Object 或基本数据类型</p>
+</li>
+</ul>
+<p>空对象调用 hashCode 方法会抛出异常。</p>
+<p>hashCode 与 equals 的定义必须相符。如果 <code>x.equals(y)</code> 返回 true，那么 <code>x.hashCode()</code> 与 <code>y.hashCode()</code> 应该返回相同的值。</p>
+<h3 id="toString-方法"><a href="#toString-方法" class="headerlink" title="toString 方法"></a>toString 方法</h3><p><code>String toString()</code></p>
+<p>返回表示对象的一个字符串。Object 的默认实现如下</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public String <span class="keyword">to</span><span class="constructor">String()</span> &#123;</span><br><span class="line">    return get<span class="constructor">Class()</span>.get<span class="constructor">Name()</span> + <span class="string">&quot;@&quot;</span> + <span class="module-access"><span class="module"><span class="identifier">Integer</span>.</span></span><span class="keyword">to</span><span class="constructor">HexString(<span class="params">hashCode</span>()</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><code>Class getClass()</code></p>
+<p>返回包含对象信息的 Class 对象。</p>
+</li>
+<li><p><code>String getName()</code></p>
+<p>由 Class 类实例调用。返回这个类的全类名</p>
+<p>全类名：即包名 + 类名。比如 <code>com.prictice.codes.Person</code></p>
+</li>
+<li><p><code>Class getSuperClass()</code></p>
+<p>由 Class 类实例调用。以 Class 形式返回其父类</p>
+<p>Object 使用时返回 null</p>
+</li>
+<li><p><code>Integer.toHexString(int val)</code></p>
+<p>返回一个数字的十六进制表示的字符串</p>
+</li>
+</ul>
+<p>toString 方法非常实用。Java 标准类库中的很多类重写了该方法，以便用户能获得一些有关对象状态的信息。</p>
+<p>打印对象 或 使用 <strong>+</strong> 操作符拼接对象 时，都会自动调用该对象的 toString 方法。</p>
+<p>当直接调用对象时，也会默认调用该方法。</p>
+<h3 id="finalize-方法"><a href="#finalize-方法" class="headerlink" title="finalize 方法"></a>finalize 方法</h3><ol>
+<li>当对象被回收时，系统会自动调用该对象的 <code>finalize</code> 方法。子类可以重写该方法，做一些释放资源的操作。</li>
+<li>何时被回收：当某对象没有任何引用时，JVM 就认为该对象是一个垃圾对象，就会（在算法决定的某个时刻）使用垃圾回收机制来销毁该对象。在销毁该对象前，会调用 <code>finalize</code> 方法。</li>
+<li>垃圾回收机制的调用，是由系统决定。也可以通过 <code>System.gc();</code> 主动触发垃圾回收机制。这个方法一经调用就会继续执行余下代码，而不会等待回收完毕。</li>
+<li>实际开发中，几乎不会运用该方法。</li>
+</ol>
+<h2 id="7-8-断点调试（Debug）"><a href="#7-8-断点调试（Debug）" class="headerlink" title="7.8 断点调试（Debug）"></a>7.8 断点调试（Debug）</h2><blockquote>
+<p>断点调试：在程序某一行设置一个断点，调试时，代码运行至此就会停住，然后可以一步一步往下调试。调试过程中可以看各个变量当前的值。如若出错，则测试到该出错代码行即显示错误并停下。进行分析从而找到这个 Bug。</p>
+<p>调试过程中是运行状态，所以，是以对象的 运行类型 执行。</p>
+<p>断点调试是程序员必须掌握的技能，能帮助我们查看 Java 底层源代码的执行过程，提高程序员 Java 水平。</p>
+</blockquote>
+<p>快捷键如下</p>
+<ul>
+<li>跳入：<code>F7</code></li>
+<li>跳过：<code>F8</code></li>
+<li>跳出：<code>shift + F8</code></li>
+<li>resume，执行到下一个断点：<code>F9</code></li>
+</ul>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="零钱通程序"><a href="#零钱通程序" class="headerlink" title="零钱通程序"></a>零钱通程序</h3><ul>
+<li><p><strong>Wallet.java</strong></p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.the_wallet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Wallet</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> void main(<span class="keyword">String</span>[] args) &#123;</span><br><span class="line">        Data p1 = <span class="keyword">new</span> <span class="type">Data</span>(<span class="string">&quot;Melody&quot;</span>);</span><br><span class="line">        p1.menu();</span><br><span class="line">        System.out.println(<span class="string">&quot;再见~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Data.java</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.the_wallet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Data</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;user&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">double</span> <span class="variable">balance</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">private</span> String[][] detail = <span class="keyword">new</span> <span class="title class_">String</span>[<span class="number">1</span>][<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">Data</span><span class="params">()</span> &#123;</span><br><span class="line">        detail[<span class="number">0</span>][<span class="number">0</span>] = <span class="string">&quot;项目\t&quot;</span>;</span><br><span class="line">        detail[<span class="number">0</span>][<span class="number">1</span>] = <span class="string">&quot;\t\t&quot;</span>;</span><br><span class="line">        detail[<span class="number">0</span>][<span class="number">2</span>] = <span class="string">&quot;时间&quot;</span>;</span><br><span class="line">        detail[<span class="number">0</span>][<span class="number">3</span>] = <span class="string">&quot; &quot;</span>;</span><br><span class="line">        detail[<span class="number">0</span>][<span class="number">4</span>] = <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Data</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>();</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">menu</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">char</span> <span class="variable">inp</span> <span class="operator">=</span> <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">        <span class="type">double</span> inpD;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="keyword">while</span> (inp != <span class="string">&#x27;y&#x27;</span> &amp;&amp; inp != <span class="string">&#x27;Y&#x27;</span>) &#123;</span><br><span class="line">            System.out.print(<span class="string">&quot;\n===============零钱通菜单===============&quot;</span></span><br><span class="line">                    + <span class="string">&quot;\n\t\t\t1.零钱通明细&quot;</span></span><br><span class="line">                    + <span class="string">&quot;\n\t\t\t2.收益入帐&quot;</span></span><br><span class="line">                    + <span class="string">&quot;\n\t\t\t3.消费入账&quot;</span></span><br><span class="line">                    + <span class="string">&quot;\n\t\t\t4.退   出&quot;</span></span><br><span class="line">                    + <span class="string">&quot;\n请选择（1-4）：&quot;</span>);</span><br><span class="line">            inp = scanner.next().charAt(<span class="number">0</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;======================================&quot;</span>);</span><br><span class="line">            <span class="keyword">switch</span> (inp) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;4&#x27;</span>:</span><br><span class="line">                    System.out.println(<span class="string">&quot;确定要退出吗？（y/n）：&quot;</span>);</span><br><span class="line">                    inp = scanner.next().charAt(<span class="number">0</span>);</span><br><span class="line">                    <span class="keyword">while</span> (inp != <span class="string">&#x27;y&#x27;</span> &amp;&amp; inp != <span class="string">&#x27;n&#x27;</span> &amp;&amp; inp != <span class="string">&#x27;Y&#x27;</span> &amp;&amp; inp != <span class="string">&#x27;N&#x27;</span>) &#123;</span><br><span class="line">                        System.out.println(<span class="string">&quot;请输入“y”或者“n”！听话！&quot;</span>);</span><br><span class="line">                        inp = scanner.next().charAt(<span class="number">0</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">                    showDetail();</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">                    System.out.println(<span class="string">&quot;请输入收益数额：&quot;</span>);</span><br><span class="line">                    inpD = scanner.nextDouble();</span><br><span class="line">                    <span class="keyword">if</span> (inpD &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">                        System.out.print(<span class="string">&quot;收益需要为正，记录消费请选择“消费入账”&quot;</span>);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    earning(inpD);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;3&#x27;</span>:</span><br><span class="line">                    System.out.println(<span class="string">&quot;请输入支出数额：&quot;</span>);</span><br><span class="line">                    inpD = scanner.nextDouble();</span><br><span class="line">                    <span class="keyword">if</span> (inpD &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                        inpD = -inpD;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (balance &lt; inpD) &#123;</span><br><span class="line">                        System.out.println(<span class="string">&quot;您的余额不足！&quot;</span>);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    System.out.println(<span class="string">&quot;请输入支出项目：&quot;</span>);</span><br><span class="line">                    spending(inpD, scanner.next());</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;g&#x27;</span>:</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">default</span>:</span><br><span class="line">                    System.out.print(<span class="string">&quot;错误。请输入数字（1-4）&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">earning</span><span class="params">(<span class="type">double</span> earn)</span> &#123;</span><br><span class="line">        String[][] temp = <span class="keyword">new</span> <span class="title class_">String</span>[<span class="built_in">this</span>.detail.length + <span class="number">1</span>][<span class="number">5</span>];</span><br><span class="line">        record(detail, temp);</span><br><span class="line">        <span class="built_in">this</span>.balance += earn;</span><br><span class="line">        tidy(<span class="string">&quot;收益入账&quot;</span>, earn, <span class="literal">true</span>, temp);</span><br><span class="line">        showDetail();</span><br><span class="line">        System.out.println(<span class="string">&quot;\n收益记录完成&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">spending</span><span class="params">(<span class="type">double</span> spend, String title)</span> &#123;</span><br><span class="line">        String[][] temp = <span class="keyword">new</span> <span class="title class_">String</span>[<span class="built_in">this</span>.detail.length + <span class="number">1</span>][<span class="number">5</span>];</span><br><span class="line">        record(detail, temp);</span><br><span class="line">        <span class="built_in">this</span>.balance -= spend;</span><br><span class="line">        tidy(title, spend, <span class="literal">false</span>, temp);</span><br><span class="line">        showDetail();</span><br><span class="line">        System.out.println(<span class="string">&quot;\n消费记录完成&quot;</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">record</span><span class="params">(String[][] detail, String[][] temp)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; detail.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) &#123;</span><br><span class="line">                temp[i][j] = detail[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">tidy</span><span class="params">(String title, <span class="type">double</span> num, <span class="type">boolean</span> isPos, String[][] temp)</span> &#123;</span><br><span class="line">        <span class="type">Date</span> <span class="variable">date</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">        <span class="type">SimpleDateFormat</span> <span class="variable">sDate</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (title.length() &lt;= <span class="number">2</span>) &#123;</span><br><span class="line">            temp[temp.length - <span class="number">1</span>][<span class="number">0</span>] = title + <span class="string">&quot;\t\t&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            temp[temp.length - <span class="number">1</span>][<span class="number">0</span>] = title + <span class="string">&quot;\t&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">String</span> <span class="variable">sign</span> <span class="operator">=</span> isPos ? <span class="string">&quot;+&quot;</span> : <span class="string">&quot;-&quot;</span>;</span><br><span class="line">        temp[temp.length - <span class="number">1</span>][<span class="number">1</span>] = sign + num + <span class="string">&quot;&quot;</span>;</span><br><span class="line">        temp[temp.length - <span class="number">1</span>][<span class="number">2</span>] = sDate.format(date);</span><br><span class="line">        temp[temp.length - <span class="number">1</span>][<span class="number">3</span>] = <span class="string">&quot;余额：&quot;</span>;</span><br><span class="line">        temp[temp.length - <span class="number">1</span>][<span class="number">4</span>] = balance + <span class="string">&quot;&quot;</span>;</span><br><span class="line">        detail = temp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">showDetail</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;--------------------------------------&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; detail.length; i++) &#123;</span><br><span class="line">            System.out.println(detail[i][<span class="number">0</span>] + detail[i][<span class="number">1</span>] + <span class="string">&quot;\t&quot;</span> + detail[i][<span class="number">2</span>] + <span class="string">&quot;\t\t&quot;</span> + detail[i][<span class="number">3</span>] + detail[i][<span class="number">4</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;--------------------------------------&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>7面向对象编程-中</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://www.fomal.cc/posts/94f151e3.html">https://www.fomal.cc/posts/94f151e3.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>Fomalhaut🥝</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2023-03-03</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2023-03-03</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"></div></div><link rel="stylesheet" href="/css/coin.css" media="defer" onload="this.media='all'"/><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">投喂作者</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://tuchuang.voooe.cn/images/2023/01/04/2.webp" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tuchuang.voooe.cn/images/2023/01/04/2.webp" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://tuchuang.voooe.cn/images/2023/01/04/20f8e49805975b8f8.webp" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tuchuang.voooe.cn/images/2023/01/04/20f8e49805975b8f8.webp" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></button></div><audio id="coinAudio" src="https://npm.elemecdn.com/akilar-candyassets@1.0.36/audio/aowu.m4a"></audio><script defer="defer" src="/js/coin.js"></script><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/aa880e5c.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" onerror="onerror=null;src='/assets/r2.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">6面向对象编程-上</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><svg class="meta_icon" style="width:22px;height:22px;position:relative;top:5px"><use xlink:href="#icon-mulu1"></use></svg><span style="font-weight:bold">目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#7-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%AD%E7%BA%A7%EF%BC%89"><span class="toc-text">7 面向对象编程（中级）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-IDEA-%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">7.1 IDEA 的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-1-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">7.1.1 常用快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-2-%E6%A8%A1%E6%9D%BF%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">7.1.2 模板快捷键</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-%E5%8C%85"><span class="toc-text">7.2 包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-1-%E9%9D%99%E6%80%81%E5%AF%BC%E5%85%A5"><span class="toc-text">7.4.1 静态导入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-text">7.3 访问修饰符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-1-%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E7%89%B9%E7%82%B9"><span class="toc-text">7.3.1 访问权限特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-2-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="toc-text">7.3.2 使用说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-%E5%B0%81%E8%A3%85"><span class="toc-text">7.4 封装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-1-%E9%9D%99%E6%80%81%E5%AF%BC%E5%85%A5-1"><span class="toc-text">7.4.1 静态导入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-2-JAR-%E6%96%87%E4%BB%B6"><span class="toc-text">7.4.2 JAR 文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-5-%E7%BB%A7%E6%89%BF"><span class="toc-text">7.5 继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-1-%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82"><span class="toc-text">7.5.1 使用细节</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-2-%E7%BB%A7%E6%89%BF%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="toc-text">7.5.2 继承的本质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-3-super-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">7.5.3 super 关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-4-%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99-%E8%A6%86%E7%9B%96"><span class="toc-text">7.5.4 方法重写 &#x2F; 覆盖</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-6-%E5%A4%9A%E6%80%81"><span class="toc-text">7.6 多态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-6-1-%E5%A4%9A%E6%80%81%E7%9A%84%E4%BD%93%E7%8E%B0"><span class="toc-text">7.6.1 多态的体现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-6-2-%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82"><span class="toc-text">7.6.2 使用细节</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-6-3-%E7%90%86%E8%A7%A3%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8"><span class="toc-text">7.6.3 理解方法调用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-7-Object-%E7%B1%BB"><span class="toc-text">7.7 Object 类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#equals-%E6%96%B9%E6%B3%95"><span class="toc-text">equals 方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hashCode-%E6%96%B9%E6%B3%95"><span class="toc-text">hashCode 方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#toString-%E6%96%B9%E6%B3%95"><span class="toc-text">toString 方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#finalize-%E6%96%B9%E6%B3%95"><span class="toc-text">finalize 方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-8-%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95%EF%BC%88Debug%EF%BC%89"><span class="toc-text">7.8 断点调试（Debug）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%84%E5%BD%95"><span class="toc-text">附录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E9%92%B1%E9%80%9A%E7%A8%8B%E5%BA%8F"><span class="toc-text">零钱通程序</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-color: transparent;"><div id="footer-wrap"><div id="ft"><div class="ft-item-1"><div class="t-top"><div class="t-t-l"><p class="ft-t t-l-t">格言🧬</p><div class="bg-ad"><div>再看看那个光点，它就在这里，这是家园，这是我们 —— 你所爱的每一个人，你认识的一个人，你听说过的每一个人，曾经有过的每一个人，都在它上面度过他们的一生✨</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="https://stellarium.org/">点击开启星辰之旅</a></div></div></div><div class="t-t-r"><p class="ft-t t-l-t">猜你想看💡</p><ul class="ft-links"><li><a href="/posts/eec9786.html">魔改指南</a><a href="/box/nav/">网址导航</a></li><li><a href="/social/link/">我的朋友</a><a href="/comments/">留点什么</a></li><li><a href="/personal/about/">关于作者</a><a href="/archives/">文章归档</a></li><li><a href="/categories/">文章分类</a><a href="/tags/">文章标签</a></li><li><a href="/box/Gallery/">我的画廊</a><a href="/personal/bb/">我的唠叨</a></li><li><a href="/site/time/">建设进程</a><a href="/site/census/">网站统计</a></li></ul></div></div></div><div class="ft-item-2"><p class="ft-t">推荐友链⌛</p><div class="ft-img-group"><div class="img-group-item"><a href="https://www.fomal.cc/" title="Fomalhaut🥝"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/60e5d4e39da7c077.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div></div></div></div><div class="copyright"><span><b>&copy;2022-2023</b></span><span><b>&nbsp;&nbsp;By Fomalhaut🥝</b></span></div><div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Frame-Hexo-blue.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.3.1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Theme-Butterfly-6513df.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用多线部署，主线路托管于Vercel"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Hosted-Vercel-brightgreen.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://user.51.la/" style="margin-inline:5px" title="本站数据分析得益于51la技术支持"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Analytics-51la-3db1eb.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://icp.gov.moe/?keyword=20226665" style="margin-inline:5px" title="本站已加入萌ICP豪华套餐，萌ICP备20226665号"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/萌ICP备-20226665-fe1384.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://bitiful.dogecast.com/buckets" style="margin-inline:5px" title="本网站经Service Worker分流至缤纷云对象存储"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src=" https://sourcebucket.s3.ladydaily.com/badge/Bucket-缤纷云-9c62da.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://www.netdun.net/" style="margin-inline:5px" title="本站使用网盾星球提供CDN加速与防护"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/CDN-网盾星球-fff2cc.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本网站源码由Github提供存储仓库"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src=" https://sourcebucket.s3.ladydaily.com/badge/Source-Github-d021d6.svg" alt=""/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button><button class="share" type="button" title="右键模式" onclick="changeMouseMode()"><i class="fas fa-mouse"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog right_side"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button class="share" type="button" title="分享链接" onclick="share()"><i class="fas fa-share-nodes"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i><span id="percent">0<span>%</span></span></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div class="js-pjax" id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();"><i class="fa fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();"><i class="fa fa-arrow-right"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();"><i class="fa fa-refresh"></i></a><a class="rightMenu-item" href="javascript:rmf.scrollToTop();"><i class="fa fa-arrow-up"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:rmf.copySelect();"><i class="fa fa-copy"></i><span>复制</span></a><a class="rightMenu-item" href="javascript:window.open(&quot;https://www.baidu.com/s?wd=&quot;+window.getSelection().toString());window.location.reload();"><i class="fa fa-search"></i><span>百度搜索</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-too"><a class="rightMenu-item" href="javascript:window.open(window.getSelection().toString());window.location.reload();"><i class="fa fa-link"></i><span>转到链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-paste"><a class="rightMenu-item" href="javascript:rmf.paste()"><i class="fa fa-copy"></i><span>粘贴</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-post"><a class="rightMenu-item" href="#post-comment"><i class="fas fa-comment"></i><span>空降评论</span></a><a class="rightMenu-item" href="javascript:rmf.copyWordsLink()"><i class="fa fa-link"></i><span>复制本文地址</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-to"><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>新窗口打开</span></a><a class="rightMenu-item" id="menu-too" href="javascript:rmf.open()"><i class="fa fa-link"></i><span>转到链接</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-img"><a class="rightMenu-item" href="javascript:rmf.saveAs()"><i class="fa fa-download"></i><span>保存图片</span></a><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>在新窗口打开</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制图片链接</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:randomPost()"><i class="fa fa-paper-plane"></i><span>随便逛逛</span></a><a class="rightMenu-item" href="javascript:switchNightMode();"><i class="fa fa-moon"></i><span>昼夜切换</span></a><a class="rightMenu-item" href="/personal/about/"><i class="fa fa-info-circle"></i><span>关于博客</span></a><a class="rightMenu-item" href="javascript:toggleWinbox();"><i class="fas fa-cog"></i><span>美化设置</span></a><a class="rightMenu-item" href="javascript:rmf.fullScreen();"><i class="fas fa-expand"></i><span>切换全屏</span></a><a class="rightMenu-item" href="javascript:window.print();"><i class="fa-solid fa-print"></i><span>打印页面</span></a></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js" type="module"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())
+setTimeout(function(){preloader.endLoading();}, 5000);
+document.getElementById('loading-box').addEventListener('click',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: '',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: '',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.staticfile.org/twikoo/1.6.8/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script><script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script><script async src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script><script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script defer src="https://cdn1.tianli0.top/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script><script async src="//at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script><script async src="//at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script><script async src="//at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script><script async src="https://cdn.wpon.cn/2022-sucai/Gold-ingot.js"></script><canvas id="universe"></canvas><canvas id="snow"></canvas><script defer src="/js/fomal.js"></script><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn1.tianli0.top/npm/js-heo@1.0.12/metingjs/Meting.min.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show","#web_bg",".js-pjax","#bibi","body > title","#app","#tag-echarts","#posts-echart","#categories-echarts"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://www.fomal.cc/categories/演示/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍥 小Fの案例演示笔记 (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://www.fomal.cc/categories/" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(33.333333333333336% - 5px);background: #e9e9e9;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: var(--text-bg-hover)}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-08-09</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt="">Markdown语法与外挂标签写法汇总</a><div class="blog-slider__text">🥧本文汇总Markdown格式以及外挂标签在网页端的渲染效果，可作为文档进行查询</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><script data-pjax src="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('gitZone');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 320px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('gitZone') && (location.pathname ==='/site/census/'|| '/site/census/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("/api?null",['#d9e0df', '#c6e0dc', '#a8dcd4', '#9adcd2', '#89ded1', '#77e0d0', '#5fdecb', '#47dcc6', '#39dcc3', '#1fdabe', '#00dab9'],'null')
+    }
+  </script><!-- hexo injector body_end end --></body></html>
