@@ -1,0 +1,635 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><div id="myscoll"></div><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Fomalhaut🥝</title><meta name="keywords" content="Java,MySQL,算法,代码,博客,Butterfly,Hexo,Fomalhaut🥝,Fomalhaut"><meta name="author" content="Fomalhaut🥝"><meta name="copyright" content="Fomalhaut🥝"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="Future is now 🍭🍭🍭">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fomalhaut🥝">
+<meta property="og:url" content="https://www.fomal.cc/page/2/index.html">
+<meta property="og:site_name" content="Fomalhaut🥝">
+<meta property="og:description" content="Future is now 🍭🍭🍭">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tuchuang.voooe.cn/images/2023/01/02/avatar.webp">
+<meta property="article:author" content="Fomalhaut🥝">
+<meta property="article:tag" content="Java,MySQL,算法,代码,博客,Butterfly,Hexo,Fomalhaut🥝,Fomalhaut">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tuchuang.voooe.cn/images/2023/01/02/avatar.webp"><link rel="shortcut icon" href="/"><link rel="canonical" href="https://www.fomal.cc/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Fomalhaut🥝',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-03-03 23:57:55'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"><style id="themeColor"></style><style id="rightSide"></style><style id="transPercent"></style><style id="blurNum"></style><style id="settingStyle"></style><span id="fps"></span><style id="defineBg"></style><style id="menu_shadow"></style><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Fomalhaut🥝" type="application/atom+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tuchuang.voooe.cn/images/2023/01/02/avatar.webp" onerror="onerror=null;src='/assets/r1.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pinweishenghuo"></use></svg><span class="menu_word" style="font-size:17px"> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/life/music/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-yinle">                   </use></svg><span class="menu_word" style="font-size:17px"> 八音盒</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying1">                   </use></svg><span class="menu_word" style="font-size:17px"> 影院</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/games/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxishoubing">                   </use></svg><span class="menu_word" style="font-size:17px"> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:17px"> 八宝箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-tubiaozhizuomoban">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/animation/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-nvwumao">                   </use></svg><span class="menu_word" style="font-size:17px"> 动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-zhifengche">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiaoxinxi"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/social/fcircle/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pengyouquan">                   </use></svg><span class="menu_word" style="font-size:17px"> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyan">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-lianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangye"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--tongjibiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/echarts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shujutongji1">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 旧时光</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-maoliang"></use></svg><span class="menu_word" style="font-size:17px"> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-qunliaotian">                   </use></svg><span class="menu_word" style="font-size:17px"> 唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/love/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-love-sign">                   </use></svg><span class="menu_word" style="font-size:17px"> 恋爱小屋</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-paperplane">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于</span></a></li></ul></div></div></div></div><div class="page home" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Fomalhaut🥝</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pinweishenghuo"></use></svg><span class="menu_word" style="font-size:17px"> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/life/music/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-yinle">                   </use></svg><span class="menu_word" style="font-size:17px"> 八音盒</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying1">                   </use></svg><span class="menu_word" style="font-size:17px"> 影院</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/games/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxishoubing">                   </use></svg><span class="menu_word" style="font-size:17px"> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:17px"> 八宝箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-tubiaozhizuomoban">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/animation/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-nvwumao">                   </use></svg><span class="menu_word" style="font-size:17px"> 动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-zhifengche">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiaoxinxi"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/social/fcircle/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pengyouquan">                   </use></svg><span class="menu_word" style="font-size:17px"> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyan">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-lianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangye"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--tongjibiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/echarts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shujutongji1">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 旧时光</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-maoliang"></use></svg><span class="menu_word" style="font-size:17px"> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-qunliaotian">                   </use></svg><span class="menu_word" style="font-size:17px"> 唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/love/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-love-sign">                   </use></svg><span class="menu_word" style="font-size:17px"> 恋爱小屋</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-paperplane">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于</span></a></li></ul></div></div><center id="name-container"><a id="page-name" href="javascript:scrollToTop()">PAGE_NAME</a></center><div id="nav-right"><div id="search-button"><a class="search faa-parent animated-hover" title="检索站内任何你想要的信息"><svg class="faa-tada icon" style="height:24px;width:24px;fill:currentColor;position:relative;top:6px" aria-hidden="true"><use xlink:href="#icon-valentine_-search-love-find-heart"></use></svg><span> 搜索</span></a></div><a class="meihua faa-parent animated-hover" onclick="toggleWinbox()" title="美化设置-自定义你的风格" id="meihua-button"><svg class="faa-tada icon" style="height:26px;width:26px;fill:currentColor;position:relative;top:8px" aria-hidden="true"><use xlink:href="#icon-tupian1"></use></svg></a><a class="sun_moon faa-parent animated-hover" onclick="switchNightMode()" title="浅色和深色模式转换" id="nightmode-button"><svg class="faa-tada" style="height:25px;width:25px;fill:currentColor;position:relative;top:7px" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon">       </use></svg></a><div id="toggle-menu"><a><i class="fas fa-bars fa-fw"></i></a></div></div></div></nav><div id="site-info"><h1 id="site-title">Fomalhaut🥝</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon faa-parent animated-hover" href="/assets/QRCode.jpg" target="_blank" title="微信"><svg class="social_icon faa-tada" aria-hidden="true" style="width:1.15em;height:1.15em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-weixin"></use></svg></a><a class="social-icon faa-parent animated-hover" href="https://res.abeim.cn/api/qq/?qq=1174008660" target="_blank" title="QQ"><svg class="social_icon faa-tada" aria-hidden="true" style="width:1.15em;height:1.15em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-QQ"></use></svg></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/220757832" target="_blank" title="B站"><svg class="social_icon faa-tada" aria-hidden="true" style="width:1.15em;height:1.15em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-bilibili"></use></svg></a><a class="social-icon faa-parent animated-hover" href="mailto:1174008660@qq.com" target="_blank" title="QQ邮箱"><svg class="social_icon faa-tada" aria-hidden="true" style="width:1.15em;height:1.15em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxiang"></use></svg></a><a class="social-icon faa-parent animated-hover" href="https://leetcode.cn/u/fomalhaut1998" target="_blank" title="力扣"><svg class="social_icon faa-tada" aria-hidden="true" style="width:1.15em;height:1.15em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-leetcode"></use></svg></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-content left"><div class="recent-post-cover"><img class="article-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" onerror="this.onerror=null;this.src='/assets/r2.jpg'" alt="19网络编程"></div><div class="recent-post-info"><a class="article-title" href="/posts/ea12e156.html" title="19网络编程"><div class="article-title-link">19网络编程</div></a><div class="recent-post-meta">               <div class="article-meta-wrap"><span class="post-meta-date"><svg class="meta_icon post-ui-icon" style="width:21px;height:21px;position:relative;top:6px"><use xlink:href="#icon-rili"></use></svg><span class="article-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2023-03-03T15:23:42.000Z" title="发表于 2023-03-03 23:23:42">2023-03-03</time><span class="article-meta-separator"> | </span><svg class="meta_icon post-ui-icon" style="width:13px;height:13px;position:relative;top:2px"><use xlink:href="#icon-gengxin1">                   </use></svg><span class="article-meta-label">更新于 </span><time class="post-meta-date-updated" datetime="2023-03-03T15:24:30.051Z" title="更新于 2023-03-03 23:24:30">2023-03-03</time></span></div></div></div><a class="article-content" href="/posts/ea12e156.html" title="19网络编程"><div class="article-content-text">19 网络编程
+网络通信：两台设备之间通过网络实现数据传输。
+java.net 包下提供了一系列类或接口，供程序员使用，完成网络通信
+19.1 网络的相关概念
+网络
+网络：两台或多台设备通过一定物理设备连接起来构成了网络
+根据网络覆盖范围的不同，对网络进行分类：
+
+局域网：覆盖范围最小，仅覆盖一个教室·机房
+城域网：覆盖范围较大，可覆盖一个城市
+广域网：覆盖范围最大，可以覆盖全国，甚至全球。万维网 是广域网的代表
+
+IP 地址
+IP 地址：用于唯一标识网络中的每台计算机 / 主机
+查看 IP 地址：ipconfig
+IPv4 是 4 个字节（32位）表示。每个字节范围是 [0,255]
+IP 地址的表示形式：点分十进制（xx.xx.xx.xx），每个十进制数范围是 [0,255]
+IP 地址的组成 = 网络地址 + 主机地址
+
+A类：0 + 7 位网络号 + 24 位主机号（0.0.0.0 ~ 127.255.255.255）
+B类：1 + 0 + 14 位网络号 + 16 位主机号（128.0.0.0 ~ 191.255.255.255）
+C类：1 + 1 + 0 + 21 位网络号 ...</div></a><div class="recent-post-arrow"></div></div></div><div class="recent-post-item"><div class="recent-post-content right"><div class="recent-post-cover"><img class="article-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" onerror="this.onerror=null;this.src='/assets/r2.jpg'" alt="17IO流"></div><div class="recent-post-info"><a class="article-title" href="/posts/b2f17187.html" title="17IO流"><div class="article-title-link">17IO流</div></a><div class="recent-post-meta">               <div class="article-meta-wrap"><span class="post-meta-date"><svg class="meta_icon post-ui-icon" style="width:21px;height:21px;position:relative;top:6px"><use xlink:href="#icon-rili"></use></svg><span class="article-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2023-03-03T15:21:38.000Z" title="发表于 2023-03-03 23:21:38">2023-03-03</time><span class="article-meta-separator"> | </span><svg class="meta_icon post-ui-icon" style="width:13px;height:13px;position:relative;top:2px"><use xlink:href="#icon-gengxin1">                   </use></svg><span class="article-meta-label">更新于 </span><time class="post-meta-date-updated" datetime="2023-03-03T15:22:34.135Z" title="更新于 2023-03-03 23:22:34">2023-03-03</time></span></div></div></div><a class="article-content" href="/posts/b2f17187.html" title="17IO流"><div class="article-content-text">17 IO流
+17.1 文件
+
+文件就是保存数据的地方。
+文件流：文件 在 程序 中是以 流 的形式来操作的。
+流：数据在数据源（文件）和程序（内存）之间经历的路径
+输入流：数据从数据源到程序的路径
+输出流：数据从程序到数据源的路径
+
+17.1.1 常用的文件操作
+
+Java 提供了 File 类，用于处理文件相关的操作
+
+
+
+创建文件对象相关构造器和方法
+
+
+new File(String pathname)：根据路径创建一个 File 对象
+
+1234String path1 = &quot;d:/test.jpg&quot;;String path2 = &quot;d:\\test.jpg&quot;;File file1 = new File(path1);File file2 = new File(path2);			//此时只是在内存中产生了一个对象
+
+
+
+new File(File parent, String child)：根据父目录文件 + 子路径构建
+
+123File parentFile1 = new File(&quot;d:\\&quot;);String  ...</div></a><div class="recent-post-arrow"></div></div></div><div class="recent-post-item"><div class="recent-post-content left"><div class="recent-post-cover"><img class="article-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" onerror="this.onerror=null;this.src='/assets/r2.jpg'" alt="16多线程"></div><div class="recent-post-info"><a class="article-title" href="/posts/56ae1cc0.html" title="16多线程"><div class="article-title-link">16多线程</div></a><div class="recent-post-meta">               <div class="article-meta-wrap"><span class="post-meta-date"><svg class="meta_icon post-ui-icon" style="width:21px;height:21px;position:relative;top:6px"><use xlink:href="#icon-rili"></use></svg><span class="article-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2023-03-03T15:20:20.000Z" title="发表于 2023-03-03 23:20:20">2023-03-03</time><span class="article-meta-separator"> | </span><svg class="meta_icon post-ui-icon" style="width:13px;height:13px;position:relative;top:2px"><use xlink:href="#icon-gengxin1">                   </use></svg><span class="article-meta-label">更新于 </span><time class="post-meta-date-updated" datetime="2023-03-03T15:21:00.807Z" title="更新于 2023-03-03 23:21:00">2023-03-03</time></span></div></div></div><a class="article-content" href="/posts/56ae1cc0.html" title="16多线程"><div class="article-content-text">16 多线程
+16.1 线程的概念
+
+对于一般程序而言，其结构大都可以分为一个入口、一个出口、一个顺次执行的语句序列。这样的语句结构称为进程，它是程序的一次动态执行，对应了代码加载、执行至完毕的全过程。
+进程即是程序在处理机中的一次运行。在这样一个结构中不仅包含程序代码，也包括了系统资源的概念。
+在单 CPU 计算机内部，微观上讲，同一时间只能有一个线程运行。实现多线程即从宏观上使多个作业同时执行。
+
+程序：为完成特定任务，用某种语言编写的一组指令的集合。
+进程：运行中的程序。当你运行一个程序，系统就会为该进程分配空间。进程是程序的一次执行过程。是一个动态过程：有其自身产生、存在、消亡的过程。
+线程：由进程创建的，进程的一个实体。一个进程可以有多个线程。
+单线程：同一时刻，只允许执行一个线程。
+多线程：同一时刻，可以执行多个线程。
+并发：同一时刻，多个任务交替执行，造成一种貌似并行的状态。单核 CPU 实现的多任务就是并发。
+并行：同一时刻，多个任务同时进行。多核 CPU 可以实现并行。
+16.1.1 线程的结构
+在 Java 中，线程由以下 3 部分组成：
+
+虚拟 CPU：封装在 j ...</div></a><div class="recent-post-arrow"></div></div></div><div class="recent-post-item"><div class="recent-post-content right"><div class="recent-post-cover"><img class="article-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" onerror="this.onerror=null;this.src='/assets/r2.jpg'" alt="12常用类"></div><div class="recent-post-info"><a class="article-title" href="/posts/2295d79c.html" title="12常用类"><div class="article-title-link">12常用类</div></a><div class="recent-post-meta">               <div class="article-meta-wrap"><span class="post-meta-date"><svg class="meta_icon post-ui-icon" style="width:21px;height:21px;position:relative;top:6px"><use xlink:href="#icon-rili"></use></svg><span class="article-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2023-03-03T15:17:23.000Z" title="发表于 2023-03-03 23:17:23">2023-03-03</time><span class="article-meta-separator"> | </span><svg class="meta_icon post-ui-icon" style="width:13px;height:13px;position:relative;top:2px"><use xlink:href="#icon-gengxin1">                   </use></svg><span class="article-meta-label">更新于 </span><time class="post-meta-date-updated" datetime="2023-03-03T15:18:15.195Z" title="更新于 2023-03-03 23:18:15">2023-03-03</time></span></div></div></div><a class="article-content" href="/posts/2295d79c.html" title="12常用类"><div class="article-content-text">12 常用类
+12.1 包装类
+
+包装类（Wrapper）：针对 八种基本数据类型 相应的 引用类型
+有了类的特点，就可以调用类中的方法
+
+
+
+
+基本数据类型
+包装类
+父类
+
+
+
+
+boolean
+Boolean
+Object
+
+
+char
+Character
+Object
+
+
+int
+Integer
+Number
+
+
+float
+Float
+Number
+
+
+double
+Double
+Number
+
+
+long
+Long
+Number
+
+
+short
+Short
+Number
+
+
+byte
+Byte
+Number
+
+
+void
+Void
+Object
+
+
+
+12.1.1 装箱和拆箱
+
+
+手动装箱和拆箱（JDK 5 以前）
+1234int n1 = 100;Integer integer = new Integer(n1);			// 手动装箱Integer integer2 = Integer.valueOf(n1);		// 手动装箱int i = integer.intValue();					// 手动拆箱
+
+
+自动装箱和拆箱（JDK 5 以后）
+123n2 = 200;In ...</div></a><div class="recent-post-arrow"></div></div></div><div class="recent-post-item"><div class="recent-post-content left"><div class="recent-post-cover"><img class="article-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" onerror="this.onerror=null;this.src='/assets/r2.jpg'" alt="11异常"></div><div class="recent-post-info"><a class="article-title" href="/posts/b0303ebd.html" title="11异常"><div class="article-title-link">11异常</div></a><div class="recent-post-meta">               <div class="article-meta-wrap"><span class="post-meta-date"><svg class="meta_icon post-ui-icon" style="width:21px;height:21px;position:relative;top:6px"><use xlink:href="#icon-rili"></use></svg><span class="article-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2023-03-03T15:15:08.000Z" title="发表于 2023-03-03 23:15:08">2023-03-03</time><span class="article-meta-separator"> | </span><svg class="meta_icon post-ui-icon" style="width:13px;height:13px;position:relative;top:2px"><use xlink:href="#icon-gengxin1">                   </use></svg><span class="article-meta-label">更新于 </span><time class="post-meta-date-updated" datetime="2023-03-03T15:16:31.457Z" title="更新于 2023-03-03 23:16:31">2023-03-03</time></span></div></div></div><a class="article-content" href="/posts/b0303ebd.html" title="11异常"><div class="article-content-text">11 异常（Exception）
+
+在 Java 语言中，将程序执行中发生的不正常情况称为 “异常”（开发过程中的语法错误和逻辑错误不是异常）
+这些 异常事件 可分为两类：
+
+
+Error（错误）：Java 虚拟机无法解决的严重问题。
+如：JVM 系统内部错误，资源耗尽等严重情况。Error 是严重错误，程序会崩溃。
+
+
+Exception：其他因编程错误或偶然的外部因素导致的一般性问题，可以使用针对性的代码进行处理。
+如：空指针访问，试图读取不存在的文件，网络中断等等。
+Exception 又分为两大类：
+
+运行时异常（程序运行时，发生的异常）
+编译时异常（编程时，编译器检查出的异常）
+
+
+
+
+11.1 异常体系图
+
+编译异常（受检异常） 和 运行异常（非受检异常）
+Java 源程序 ——(javac.exe)——&gt; 字节码文件 ——(java.exe)——&gt; 在内存中加载，运行类
+​ 编译异常↑ 运行异常↑
+
+
+​ （异常体系图_11.1）
+异常分为两大类：运行时异常 和 编译时异常
+
+
+运行时异常，编译器不要求强制处置的异常。一般是指编程的逻辑错误，是程序员应该避免其 ...</div></a><div class="recent-post-arrow"></div></div></div><div class="recent-post-item"><div class="recent-post-content right"><div class="recent-post-cover"><img class="article-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" onerror="this.onerror=null;this.src='/assets/r2.jpg'" alt="10枚举和注解"></div><div class="recent-post-info"><a class="article-title" href="/posts/d213df75.html" title="10枚举和注解"><div class="article-title-link">10枚举和注解</div></a><div class="recent-post-meta">               <div class="article-meta-wrap"><span class="post-meta-date"><svg class="meta_icon post-ui-icon" style="width:21px;height:21px;position:relative;top:6px"><use xlink:href="#icon-rili"></use></svg><span class="article-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2023-03-03T15:13:19.000Z" title="发表于 2023-03-03 23:13:19">2023-03-03</time><span class="article-meta-separator"> | </span><svg class="meta_icon post-ui-icon" style="width:13px;height:13px;position:relative;top:2px"><use xlink:href="#icon-gengxin1">                   </use></svg><span class="article-meta-label">更新于 </span><time class="post-meta-date-updated" datetime="2023-03-03T15:14:07.738Z" title="更新于 2023-03-03 23:14:07">2023-03-03</time></span></div></div></div><a class="article-content" href="/posts/d213df75.html" title="10枚举和注解"><div class="article-content-text">10 枚举和注解
+10.1 枚举
+把具体的对象一一列举出来的类，就称为 枚举类（enumeration）
+实现方法：
+
+自定义枚举
+enum 关键字枚举
+
+10.1.1 自定义枚举
+
+构造器私有化
+去掉 set 方法（可保留 get），防止属性被修改。因为枚举对象值通常为只读
+在类内部直接创建固定对象。使用 final + static 共同修饰，对象名通常全部大写。
+枚举对象按照需要可以有多个属性
+
+10.1.2 enum 关键字
+1234567891011enum Example &#123; RED(&quot;小红&quot;, 10), BLUE(&quot;小蓝&quot;, 11), YELLOW; //这句话要放在前面，第三个是无参 private String name; private int age; private Example(String name, int age) &#123;     this.name = name;     this.age = age; &#125;&#125;
+
+用关键字 enum 替代 class
+用 常量名.(形参列表); ...</div></a><div class="recent-post-arrow"></div></div></div><div class="recent-post-item"><div class="recent-post-content left"><div class="recent-post-cover"><img class="article-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" onerror="this.onerror=null;this.src='/assets/r2.jpg'" alt="9面向对象编程-下"></div><div class="recent-post-info"><a class="article-title" href="/posts/ab8fe542.html" title="9面向对象编程-下"><div class="article-title-link">9面向对象编程-下</div></a><div class="recent-post-meta">               <div class="article-meta-wrap"><span class="post-meta-date"><svg class="meta_icon post-ui-icon" style="width:21px;height:21px;position:relative;top:6px"><use xlink:href="#icon-rili"></use></svg><span class="article-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2023-03-03T15:10:54.000Z" title="发表于 2023-03-03 23:10:54">2023-03-03</time><span class="article-meta-separator"> | </span><svg class="meta_icon post-ui-icon" style="width:13px;height:13px;position:relative;top:2px"><use xlink:href="#icon-gengxin1">                   </use></svg><span class="article-meta-label">更新于 </span><time class="post-meta-date-updated" datetime="2023-03-03T15:11:55.137Z" title="更新于 2023-03-03 23:11:55">2023-03-03</time></span></div></div></div><a class="article-content" href="/posts/ab8fe542.html" title="9面向对象编程-下"><div class="article-content-text">9 面向对象编程（高级）
+9.1 类变量和类方法
+9.1.1 类变量
+
+类变量：也叫 静态变量/静态属性。是该类所有对象共享的变量。任何一个该类对象访问时都是相同的值，任何一个该类对象修改时也是同一个变量。
+语法（推荐）：访问修饰符 static 数据类型 变量名;
+或者也可以：static 访问修饰符 数据类型 变量名;
+根据 JDK 版本的不同，类变量存放在 堆 中或 方法区 中。
+
+
+
+什么时候需要用类变量：
+当我们需要让某个类的所有对象都共享一个变量时，就可以考虑使用类变量（静态变量）
+
+
+类变量 与 实例变量（普通属性）的区别：
+类变量 是该类所有对象共享的，而 实例变量 是每个对象独享的
+
+
+加上 static 称为 类变量 或 静态变量。否则称为 实例变量/普通变量/非静态变量
+
+
+静态变量 可以通过 类名.类变量名; 或 对象名.类变量名; 来访问。但 Java 设计者推荐我们用 类名.类变量名; 来访问。（需满足访问权限和范围）
+
+
+类变量 是在加载类时就初始化了。所以，没有创建对象实例也能访问。
+
+
+类变量 的生命周期是随着 类的加载 开始，随着 类的消亡 而销毁。 ...</div></a><div class="recent-post-arrow"></div></div></div><div class="recent-post-item"><div class="recent-post-content right"><div class="recent-post-cover"><img class="article-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" onerror="this.onerror=null;this.src='/assets/r2.jpg'" alt="8项目：房屋出租系统"></div><div class="recent-post-info"><a class="article-title" href="/posts/5d504d25.html" title="8项目：房屋出租系统"><div class="article-title-link">8项目：房屋出租系统</div></a><div class="recent-post-meta">               <div class="article-meta-wrap"><span class="post-meta-date"><svg class="meta_icon post-ui-icon" style="width:21px;height:21px;position:relative;top:6px"><use xlink:href="#icon-rili"></use></svg><span class="article-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2023-03-03T15:08:35.000Z" title="发表于 2023-03-03 23:08:35">2023-03-03</time><span class="article-meta-separator"> | </span><svg class="meta_icon post-ui-icon" style="width:13px;height:13px;position:relative;top:2px"><use xlink:href="#icon-gengxin1">                   </use></svg><span class="article-meta-label">更新于 </span><time class="post-meta-date-updated" datetime="2023-03-03T15:09:41.296Z" title="更新于 2023-03-03 23:09:41">2023-03-03</time></span></div></div></div><a class="article-content" href="/posts/5d504d25.html" title="8项目：房屋出租系统"><div class="article-content-text">8 项目：房屋出租系统
+
+crud： c[create] r[read] u[update] d[delete]
+
+一阶段毕业作业
+
+
+RentSystem.java（入口）
+123456789package com.house_rent;public class RentSystem &#123;    public static void main(String[] args) &#123;        RentSysMenu rentSys = new RentSysMenu();        rentSys.menu();        System.out.println(&quot;再见~&quot;);    &#125;&#125;
+
+
+RentSysMenu.java
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758package com.house_rent;import java.util.Sca ...</div></a><div class="recent-post-arrow"></div></div></div><div class="recent-post-item"><div class="recent-post-content left"><div class="recent-post-cover"><img class="article-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" onerror="this.onerror=null;this.src='/assets/r2.jpg'" alt="7面向对象编程-中"></div><div class="recent-post-info"><a class="article-title" href="/posts/94f151e3.html" title="7面向对象编程-中"><div class="article-title-link">7面向对象编程-中</div></a><div class="recent-post-meta">               <div class="article-meta-wrap"><span class="post-meta-date"><svg class="meta_icon post-ui-icon" style="width:21px;height:21px;position:relative;top:6px"><use xlink:href="#icon-rili"></use></svg><span class="article-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2023-03-03T15:03:06.000Z" title="发表于 2023-03-03 23:03:06">2023-03-03</time><span class="article-meta-separator"> | </span><svg class="meta_icon post-ui-icon" style="width:13px;height:13px;position:relative;top:2px"><use xlink:href="#icon-gengxin1">                   </use></svg><span class="article-meta-label">更新于 </span><time class="post-meta-date-updated" datetime="2023-03-03T15:05:35.990Z" title="更新于 2023-03-03 23:05:35">2023-03-03</time></span></div></div></div><a class="article-content" href="/posts/94f151e3.html" title="7面向对象编程-中"><div class="article-content-text">7 面向对象编程（中级）
+
+IDE：集成开发环境
+
+
+IDEA
+
+
+Eeclipse：一个开源的、基于 Java 的可扩展开发平台。是由 IBM 公司开发，在 2001 年 11 月贡献给开源社区的，目前最优秀的 Java 开发 IDE 之一。
+
+
+
+7.1 IDEA 的使用
+
+IDEA：全程 IntelliJ IDEA。在业界被公认为最好的 Java 开发工具。是捷克 JetBrains 公司的产品。除了 Java 开发，还支持 HTML，CSS，PHP，MySQL，Python 等。下载地址
+
+7.1.1 常用快捷键
+
+删除当前行：ctrl + Y
+复制当前行：ctrl + D
+补全代码：alt + /
+添加 / 取消注释：ctrl + /
+导入该行需要的类：alt + enter
+快速格式化代码：ctrl + alt + L
+快速运行程序：shift + F10（我改成了alt + R）
+生成构造器：alt + insert
+查看一个类的层级关系：ctrl + H
+定位一个方法：把光标放在一个方法上，按 ctrl + B
+自动分配变量名：在后面加上 .var
+查看模板快捷键：ct ...</div></a><div class="recent-post-arrow"></div></div></div><div class="recent-post-item"><div class="recent-post-content right"><div class="recent-post-cover"><img class="article-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" onerror="this.onerror=null;this.src='/assets/r2.jpg'" alt="6面向对象编程-上"></div><div class="recent-post-info"><a class="article-title" href="/posts/aa880e5c.html" title="6面向对象编程-上"><div class="article-title-link">6面向对象编程-上</div></a><div class="recent-post-meta">               <div class="article-meta-wrap"><span class="post-meta-date"><svg class="meta_icon post-ui-icon" style="width:21px;height:21px;position:relative;top:6px"><use xlink:href="#icon-rili"></use></svg><span class="article-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2023-03-03T14:54:31.000Z" title="发表于 2023-03-03 22:54:31">2023-03-03</time><span class="article-meta-separator"> | </span><svg class="meta_icon post-ui-icon" style="width:13px;height:13px;position:relative;top:2px"><use xlink:href="#icon-gengxin1">                   </use></svg><span class="article-meta-label">更新于 </span><time class="post-meta-date-updated" datetime="2023-03-03T15:05:35.989Z" title="更新于 2023-03-03 23:05:35">2023-03-03</time></span></div></div></div><a class="article-content" href="/posts/aa880e5c.html" title="6面向对象编程-上"><div class="article-content-text">6 面向对象编程（基础）
+
+面向对象是一种开发软件的方法，使分析、设计和实现一个系统的方法尽可能接近人们认识一个系统的方法。包括三个方面：面向对象分析、面向对象设计、面向对象程序设计。
+Java 语言是纯面向对象的语言。其所有数据类型都有相应的类，程序可以完全基于对象编写。
+
+6.1 类与对象（OOP）
+
+类 就是数据类型。可以是 int 也可以是 人类
+对象 就是其中具体的实例。可以是 100 也可以是 韩顺平
+从 类 到 对象，可以称为 创建一个对象，也可以说 实例化一个对象，或者 把对象实例化
+
+类 是抽象的、概念的，代表一类事物
+对象 是具体的、实际的，代表一个个具体事物
+类 是 对象 的模板，对象 是 类 的一个个体，对应一个实例
+
+
+下面，我们定义了一个类 Cat 并创建了一些 对象 cat1 cat2：
+1234567891011121314151617public class Code6_1&#123;	public static void main(String[] args)&#123;		Cat cat1 = new Cat();		cat1.name = &qu ...</div></a><div class="recent-post-arrow"></div></div></div><div class="recent-post-item"><div class="recent-post-content left"><div class="recent-post-cover"><img class="article-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" onerror="this.onerror=null;this.src='/assets/r2.jpg'" alt="5数组排序和查找"></div><div class="recent-post-info"><a class="article-title" href="/posts/c48e9b64.html" title="5数组排序和查找"><div class="article-title-link">5数组排序和查找</div></a><div class="recent-post-meta">               <div class="article-meta-wrap"><span class="post-meta-date"><svg class="meta_icon post-ui-icon" style="width:21px;height:21px;position:relative;top:6px"><use xlink:href="#icon-rili"></use></svg><span class="article-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2023-03-03T14:50:30.000Z" title="发表于 2023-03-03 22:50:30">2023-03-03</time><span class="article-meta-separator"> | </span><svg class="meta_icon post-ui-icon" style="width:13px;height:13px;position:relative;top:2px"><use xlink:href="#icon-gengxin1">                   </use></svg><span class="article-meta-label">更新于 </span><time class="post-meta-date-updated" datetime="2023-03-03T15:05:35.985Z" title="更新于 2023-03-03 23:05:35">2023-03-03</time></span></div></div></div><a class="article-content" href="/posts/c48e9b64.html" title="5数组排序和查找"><div class="article-content-text">5 数组、排序和查找
+
+数组：可以存放多个同一类型的数据。数组也是一种数据，是引用类型。
+即：数组就是一组数据。
+
+5.1 一维数组
+
+数组可以是多个相同类型数据的组合，实现对这些数据的统一管理。
+数组中的元素可以是任何数据类型。包括基本类型和引用类型。
+数组的下标从 0 开始。且必须在指定范围内使用，否则报错。
+数组属于 引用类型，数组型数据是 对象（Object）
+数组创建后，如果没有赋值，有默认值：int（0），short（0），byte（0），long（0L），float（0.0F），double（0.0），char（000），boolean（false），String（null），Object（null）
+
+数组的构造方法：
+使用数组的步骤：1.声明数组并开辟空间 2.给数组各个元素赋值 3.使用数组
+
+
+构造方式1：动态初始化
+123int[] ints = new int[5];				// 创建了数组 name，存放5个intint ints2[] = new int[1];				// 这种写法也行ints[2] = 15;							// 访问数组第3个数
+
+
+构 ...</div></a><div class="recent-post-arrow"></div></div></div><div class="recent-post-item"><div class="recent-post-content right"><div class="recent-post-cover"><img class="article-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" onerror="this.onerror=null;this.src='/assets/r2.jpg'" alt="4程序控制和结构"></div><div class="recent-post-info"><a class="article-title" href="/posts/50eb79dd.html" title="4程序控制和结构"><div class="article-title-link">4程序控制和结构</div></a><div class="recent-post-meta">               <div class="article-meta-wrap"><span class="post-meta-date"><svg class="meta_icon post-ui-icon" style="width:21px;height:21px;position:relative;top:6px"><use xlink:href="#icon-rili"></use></svg><span class="article-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2023-03-03T14:48:50.000Z" title="发表于 2023-03-03 22:48:50">2023-03-03</time><span class="article-meta-separator"> | </span><svg class="meta_icon post-ui-icon" style="width:13px;height:13px;position:relative;top:2px"><use xlink:href="#icon-gengxin1">                   </use></svg><span class="article-meta-label">更新于 </span><time class="post-meta-date-updated" datetime="2023-03-03T15:05:35.987Z" title="更新于 2023-03-03 23:05:35">2023-03-03</time></span></div></div></div><a class="article-content" href="/posts/50eb79dd.html" title="4程序控制和结构"><div class="article-content-text">4 程序控制结构
+
+程序运行的流程控制决定程序是如何执行的，是我们必须掌握的。主要分为：顺序控制、分支控制、循环控制。
+
+4.1 顺序控制
+
+程序从上到下逐行执行，中间没有任何判断和跳转（默认的控制顺序）
+比如：Java 定义变量时采用合法的前向引用。
+
+12graph LRA(A语句)--&gt;B(B语句)--&gt;C(C语句)--&gt;D(D语句)--&gt;E(...)
+语句：Java 中最小的执行单位。语句分为 单语句 和 复合语句。
+
+
+单语句：通常意义的一条语句。语句间以分号 ; 分隔。
+
+
+复合语句：一对大括号括起来的语句组。也称为 “块”
+12345&#123;  语句1;   语句2;  ...&#125;
+块中可以有多条语句。块后没有分号 ;
+
+
+4.2 分支控制 if-else
+
+让程序有选择的执行。主要分为：单分支控制、双分支控制
+
+4.2.1 单分支控制
+1if (条件表达式) 语句;
+特别地，把代码块（复合语句）作为语句的场合也能这样写：
+123if (条件表达式) &#123; 执行代码块;&#125;
+当条件表达式为 ture，就会执行 &#123 ...</div></a><div class="recent-post-arrow"></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="author_top is-center"><div class="card-info-avatar"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tuchuang.voooe.cn/images/2023/01/02/avatar.webp" onerror="this.onerror=null;this.src='/assets/r1.jpg'" alt="avatar"/></div><div class="author-status-box"><div class="author-status"><g-emoji class="g-emoji" alias="palm_tree" fallback-src="https://lskypro.acozycotage.net/LightPicture/2022/12/fe1dc0402e623096.jpg">🐟</g-emoji><span>认真摸鱼中</span></div></div></div><b><div class="author-info__name">Fomalhaut🥝</div></b><div class="author-info__description">Future is now 🍭🍭🍭</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/fomalhaut1998" title="前往作者的Github"><span>前往小窝</span><i class="faa-passing animated" style="padding-left:20px;display:inline-block;vertical-align:middle;"><svg class="icon" style="height:28px;width:28px;fill:currentColor;position:relative;top:5px"><use xlink:href="#icon-xiaoqiche"></use></svg></i></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="/assets/QRCode.jpg" target="_blank" title="微信"><svg class="social_icon faa-tada" aria-hidden="true" style="width:1.15em;height:1.15em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-weixin"></use></svg></a><a class="social-icon faa-parent animated-hover" href="https://res.abeim.cn/api/qq/?qq=1174008660" target="_blank" title="QQ"><svg class="social_icon faa-tada" aria-hidden="true" style="width:1.15em;height:1.15em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-QQ"></use></svg></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/220757832" target="_blank" title="B站"><svg class="social_icon faa-tada" aria-hidden="true" style="width:1.15em;height:1.15em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-bilibili"></use></svg></a><a class="social-icon faa-parent animated-hover" href="mailto:1174008660@qq.com" target="_blank" title="QQ邮箱"><svg class="social_icon faa-tada" aria-hidden="true" style="width:1.15em;height:1.15em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxiang"></use></svg></a><a class="social-icon faa-parent animated-hover" href="https://leetcode.cn/u/fomalhaut1998" target="_blank" title="力扣"><svg class="social_icon faa-tada" aria-hidden="true" style="width:1.15em;height:1.15em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-leetcode"></use></svg></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><a class="faa-parent animated-hover"><svg class="faa-tada icon" style="height:25px;width:25px;fill:currentColor;position:relative;top:5px" aria-hidden="true"><use xlink:href="#icon-gonggao"></use></svg></a><span style="font-weight:bold">公告栏</span></div><div class="announcement_content"><center><b>--- 主域名 ---<br><a href="https://www.fomal.cc" title="此线路部署于Vercel" class="anno_content"><font color="#5ea6e5">fomal.cc</font></a>&nbsp;|&nbsp;<a target="_blank" rel="noopener" href="https://www.fomal.cn" title="此线路部署于Vercel" class="anno_content"><font color="#5ea6e5">fomal.cn</font></a><br>--- 备用域名 ---<br><a target="_blank" rel="noopener" href="https://netlify.fomal.cc" title="此线路部署于Netlify" class="anno_content"><font color="#5ea6e5">netlify.fomal.cc</font></a><br><a target="_blank" rel="noopener" href="https://cloudflare.fomal.cc" title="此线路部署于Cloudflare" class="anno_content"><font color="#5ea6e5">cloudflare.fomal.cc</font></a><br>--- 网站安卓APP ---<br>🍧<a target="_blank" rel="noopener" href="https://lskypro.acozycotage.net/Fomalhaut/Fomalhaut.apk" title="点这里可以下载网站的安卓APP" class="anno_content"><font color="#5ea6e5">点此下载</font></a>🍧</b></center></div><div id="welcome-info"></div></div><div class="sticky_layout"><div class="card-widget card-friend-link"><div class="item-headline"><a class="faa-parent animated-hover"><svg class="faa-tada icon" style="height:25px;width:25px;fill:currentColor;position:relative;top:5px" aria-hidden="true"><use xlink:href="#icon-tongxunlu"></use></svg></a><span style="font-weight:bold">通讯录</span></div><div class="card-friend-link-container"><details class="card-friend-class-name"><summary class="card-friend-class-desc" title="这里是最熟悉的小伙伴或者赞助商，当然是最前排啦"><sapn>0.推荐网站🍔</sapn><span class="online-friend-number"></span><sapn>1</sapn></summary><a class="card-friend-item online-friend-link" href="https://www.fomal.cc/" title="Fomalhaut🥝" target="_blank"><img class="no-lightbox card-friend-avatar" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.fomal.cc/assets/avatar.webp" onerror="this.onerror=null;this.src='/assets/r1.jpg'" alt="Fomalhaut🥝"/><div class="card-friend-details"><div class="card-friend-name">Fomalhaut🥝</div><div class="card-friend-descr" title="Future is now 🍭🍭🍭">Future is now 🍭🍭🍭</div></div></a></details></div><div class="ja-pjax"><script>var addressbook = document.getElementsByClassName("card-friend-class-name");
+for (var i=0; i<addressbook.length; i++){
+  var online = addressbook[i].getElementsByClassName("online-friend-link").length;
+  addressbook[i].getElementsByClassName("online-friend-number")[0].innerHTML = "  "+online+"/";
+}</script></div></div><div class="card-widget card-webinfo"><div class="item-headline"><a class="faa-parent animated-hover"><svg class="faa-tada icon" style="height:25px;width:25px;fill:currentColor;position:relative;top:5px" aria-hidden="true"><use xlink:href="#icon-shujutongji2"></use></svg></a><span style="font-weight:bold">小站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">27</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">14.5w</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-03-03T15:57:54.391Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-color: transparent;"><div id="footer-wrap"><div id="ft"><div class="ft-item-1"><div class="t-top"><div class="t-t-l"><p class="ft-t t-l-t">格言🧬</p><div class="bg-ad"><div>再看看那个光点，它就在这里，这是家园，这是我们 —— 你所爱的每一个人，你认识的一个人，你听说过的每一个人，曾经有过的每一个人，都在它上面度过他们的一生✨</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="https://stellarium.org/">点击开启星辰之旅</a></div></div></div><div class="t-t-r"><p class="ft-t t-l-t">猜你想看💡</p><ul class="ft-links"><li><a href="/posts/eec9786.html">魔改指南</a><a href="/box/nav/">网址导航</a></li><li><a href="/social/link/">我的朋友</a><a href="/comments/">留点什么</a></li><li><a href="/personal/about/">关于作者</a><a href="/archives/">文章归档</a></li><li><a href="/categories/">文章分类</a><a href="/tags/">文章标签</a></li><li><a href="/box/Gallery/">我的画廊</a><a href="/personal/bb/">我的唠叨</a></li><li><a href="/site/time/">建设进程</a><a href="/site/census/">网站统计</a></li></ul></div></div></div><div class="ft-item-2"><p class="ft-t">推荐友链⌛</p><div class="ft-img-group"><div class="img-group-item"><a href="https://www.fomal.cc/" title="Fomalhaut🥝"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/60e5d4e39da7c077.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div></div></div></div><div class="copyright"><span><b>&copy;2022-2023</b></span><span><b>&nbsp;&nbsp;By Fomalhaut🥝</b></span></div><div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Frame-Hexo-blue.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.3.1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Theme-Butterfly-6513df.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用多线部署，主线路托管于Vercel"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Hosted-Vercel-brightgreen.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://user.51.la/" style="margin-inline:5px" title="本站数据分析得益于51la技术支持"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/Analytics-51la-3db1eb.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://icp.gov.moe/?keyword=20226665" style="margin-inline:5px" title="本站已加入萌ICP豪华套餐，萌ICP备20226665号"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/萌ICP备-20226665-fe1384.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://bitiful.dogecast.com/buckets" style="margin-inline:5px" title="本网站经Service Worker分流至缤纷云对象存储"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src=" https://sourcebucket.s3.ladydaily.com/badge/Bucket-缤纷云-9c62da.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://www.netdun.net/" style="margin-inline:5px" title="本站使用网盾星球提供CDN加速与防护"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.ladydaily.com/badge/CDN-网盾星球-fff2cc.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本网站源码由Github提供存储仓库"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src=" https://sourcebucket.s3.ladydaily.com/badge/Source-Github-d021d6.svg" alt=""/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button><button class="share" type="button" title="右键模式" onclick="changeMouseMode()"><i class="fas fa-mouse"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog right_side"></i></button><button class="share" type="button" title="分享链接" onclick="share()"><i class="fas fa-share-nodes"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i><span id="percent">0<span>%</span></span></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div class="js-pjax" id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();"><i class="fa fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();"><i class="fa fa-arrow-right"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();"><i class="fa fa-refresh"></i></a><a class="rightMenu-item" href="javascript:rmf.scrollToTop();"><i class="fa fa-arrow-up"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:rmf.copySelect();"><i class="fa fa-copy"></i><span>复制</span></a><a class="rightMenu-item" href="javascript:window.open(&quot;https://www.baidu.com/s?wd=&quot;+window.getSelection().toString());window.location.reload();"><i class="fa fa-search"></i><span>百度搜索</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-too"><a class="rightMenu-item" href="javascript:window.open(window.getSelection().toString());window.location.reload();"><i class="fa fa-link"></i><span>转到链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-paste"><a class="rightMenu-item" href="javascript:rmf.paste()"><i class="fa fa-copy"></i><span>粘贴</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-post"><a class="rightMenu-item" href="#post-comment"><i class="fas fa-comment"></i><span>空降评论</span></a><a class="rightMenu-item" href="javascript:rmf.copyWordsLink()"><i class="fa fa-link"></i><span>复制本文地址</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-to"><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>新窗口打开</span></a><a class="rightMenu-item" id="menu-too" href="javascript:rmf.open()"><i class="fa fa-link"></i><span>转到链接</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-img"><a class="rightMenu-item" href="javascript:rmf.saveAs()"><i class="fa fa-download"></i><span>保存图片</span></a><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>在新窗口打开</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制图片链接</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:randomPost()"><i class="fa fa-paper-plane"></i><span>随便逛逛</span></a><a class="rightMenu-item" href="javascript:switchNightMode();"><i class="fa fa-moon"></i><span>昼夜切换</span></a><a class="rightMenu-item" href="/personal/about/"><i class="fa fa-info-circle"></i><span>关于博客</span></a><a class="rightMenu-item" href="javascript:toggleWinbox();"><i class="fas fa-cog"></i><span>美化设置</span></a><a class="rightMenu-item" href="javascript:rmf.fullScreen();"><i class="fas fa-expand"></i><span>切换全屏</span></a><a class="rightMenu-item" href="javascript:window.print();"><i class="fa-solid fa-print"></i><span>打印页面</span></a></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js" type="module"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())
+setTimeout(function(){preloader.endLoading();}, 5000);
+document.getElementById('loading-box').addEventListener('click',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    window.typed = new Typed("#subtitle", {
+      strings: ["Welcome to Fomalhaut🥝のTiny Home!🤣🤣🤣","Hope you have a nice day!🍭🍭🍭"],
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = 'Welcome to Fomalhaut🥝のTiny Home!🤣🤣🤣'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/typed.js/2.0.12/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script></div><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script><script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script><script async src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script><script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script defer src="https://cdn1.tianli0.top/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script><script async src="//at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script><script async src="//at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script><script async src="//at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script><script async src="https://cdn.wpon.cn/2022-sucai/Gold-ingot.js"></script><canvas id="universe"></canvas><canvas id="snow"></canvas><script defer src="/js/fomal.js"></script><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn1.tianli0.top/npm/js-heo@1.0.12/metingjs/Meting.min.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show","#web_bg",".js-pjax","#bibi","body > title","#app","#tag-echarts","#posts-echart","#categories-echarts"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://www.fomal.cc/categories/演示/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍥 小Fの案例演示笔记 (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://www.fomal.cc/categories/" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(33.333333333333336% - 5px);background: #e9e9e9;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: var(--text-bg-hover)}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><script data-pjax src="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('gitZone');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 320px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('gitZone') && (location.pathname ==='/site/census/'|| '/site/census/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("/api?null",['#d9e0df', '#c6e0dc', '#a8dcd4', '#9adcd2', '#89ded1', '#77e0d0', '#5fdecb', '#47dcc6', '#39dcc3', '#1fdabe', '#00dab9'],'null')
+    }
+  </script><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_14.webp" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-08-09</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt="">Markdown语法与外挂标签写法汇总</a><div class="blog-slider__text">🥧本文汇总Markdown格式以及外挂标签在网页端的渲染效果，可作为文档进行查询</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><!-- hexo injector body_end end --></body></html>
